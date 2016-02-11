@@ -108,7 +108,11 @@
     aryDefaultTasks.push('script.js');
     
     
+    
+    
     // Watch (All Files)
+    //-----------------------------------------------
+    
     objGulp.task('watch', function() 
     {   
         objGulp.run('browserSync');
@@ -123,7 +127,9 @@
     
     
         
+        
     // Copy files from Bower Components
+    //-----------------------------------------------
     
     // Images
     objGulp.task('boilerplate-images', function() 
@@ -147,12 +153,76 @@
             .pipe(objGulp.dest(strDistPath + 'fonts/'));
     });
     aryCopyTasks.push('boilerplate-fonts');
+    
+    // Twig library
+    objGulp.task('twig', function() 
+    {    
+        // Execute task
+        objGulp.src('bower_components/twig/lib/Twig/**/*')
+            .pipe(objGulp.dest(strDistPath + 'inc/Twig/'));
+    });
+    aryCopyTasks.push('twig');
+    
+    // Twig extensions
+    objGulp.task('twig-extensions.php', function() 
+    {    
+        // Execute task
+        objGulp.src('bower_components/mizzou-framework/dist/inc/twig-extensions.php')
+            .pipe(objGulp.dest(strDistPath + 'inc/'));
+    });
+    aryCopyTasks.push('twig-extensions.php');
+    
+    // Twig templates
+    objGulp.task('twig-templates', function() 
+    {    
+        // Components - execute task
+        objGulp.src([
+                'bower_components/mizzou-framework/dist/inc/templates/components/footer.html.twig',
+                'bower_components/mizzou-framework/dist/inc/templates/components/google-analytics.html.twig',
+                'bower_components/mizzou-framework/dist/inc/templates/components/head-css.html.twig',
+                'bower_components/mizzou-framework/dist/inc/templates/components/head-icons.html.twig',
+                'bower_components/mizzou-framework/dist/inc/templates/components/head-metadata.html.twig',
+                'bower_components/mizzou-framework/dist/inc/templates/components/header-with-university-signature.html.twig',
+                'bower_components/mizzou-framework/dist/inc/templates/components/legal-text.html.twig',
+                'bower_components/mizzou-framework/dist/inc/templates/components/main.html.twig',
+                'bower_components/mizzou-framework/dist/inc/templates/components/navigation-pagination.html.twig',
+                'bower_components/mizzou-framework/dist/inc/templates/components/navigation.html.twig',
+                'bower_components/mizzou-framework/dist/inc/templates/components/outdated-browser.html.twig',
+                'bower_components/mizzou-framework/dist/inc/templates/components/search-results.html.twig',
+                'bower_components/mizzou-framework/dist/inc/templates/components/skip-to-content.html.twig',
+                'bower_components/mizzou-framework/dist/inc/templates/components/social-media.html.twig',
+                'bower_components/mizzou-framework/dist/inc/templates/components/typekit.html.twig',
+                'bower_components/mizzou-framework/dist/inc/templates/components/unit-signature.html.twig',
+                'bower_components/mizzou-framework/dist/inc/templates/components/university-signature.html.twig'
+            ])
+            .pipe(objGulp.dest(strDistPath + 'inc/templates/components/'));
+            
+        // Macros - execute task
+        objGulp.src([
+                'bower_components/mizzou-framework/dist/inc/templates/macros/navigation.html.twig'
+            ])
+            .pipe(objGulp.dest(strDistPath + 'inc/templates/macros/'));
+            
+        // Templates - execute task
+        objGulp.src([
+                'bower_components/mizzou-framework/dist/inc/templates/main-template.html.twig'
+            ])
+            .pipe(objGulp.dest(strDistPath + 'inc/templates/'));
+    });
+    aryCopyTasks.push('twig-templates');
+    
         
     // Register copy tasks
     objGulp.task('copy', aryCopyTasks);
     
     
     
-    // Register default tasks
+    
+    
+    
+    // Deafult task
+    //-----------------------------------------------
+    
     objGulp.task('default', aryDefaultTasks);
+    
 }());
