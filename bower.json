@@ -1,0 +1,13 @@
+{
+    "name": "mizzou-framework-style-gide",
+    "description": "Mizzou Framework style guide and best practices",
+    "authors": ["Josh Nichols <nicholsjc@missouri.edu>, Josh Hughes <hughesjd@missouri.edu>"],
+    "repository": "bitbucket:",
+    "main": [],
+    "ignore": [],
+    "dependencies": {
+        "prism": "gh-pages",
+        "twig": "git://github.com/twigphp/Twig.git#v1.23.1",
+        "mizzou-framework": "https://mrblank@bitbucket.org/muwebcom/mizzou-framework.git#version-2"
+    }
+}

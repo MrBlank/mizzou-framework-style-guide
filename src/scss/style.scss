@@ -1,0 +1,502 @@
+/**
+ * CSS for Mizzou Framework Style Guide
+ *
+ * @authors Josh Nichols (nicholsjc@missouri.edu), Josh Hughes (hughesjd@missouri.edu), University of Missouri
+ * @copyright 2016 Curators of the University of Missouri
+ */
+
+/* @group Variable Overrides */
+
+$base-margin:                   1.5;
+
+/* @end */ 
+
+
+/* @group Media Queries */
+
+$query-small:                 'screen and (max-width: 700px)';
+$query-medium:                'screen and (max-width: 900px)';
+$query-large:                 'screen and (min-width: 900px)';
+
+/* @end */ 
+
+/* @group Imports */
+    
+@import "../../bower_components/mizzou-framework/src/scss/_variables";
+@import "../../bower_components/mizzou-framework/src/scss/_fonts";
+@import "../../bower_components/mizzou-framework/src/scss/_base-mixins"; 
+@import "../../bower_components/mizzou-framework/src/scss/_base";
+@import "../../bower_components/mizzou-framework/src/scss/_base-helpers";  
+@import "../../bower_components/mizzou-framework/src/scss/_forms"; 
+@import "../../bower_components/mizzou-framework/src/scss/_buttons"; 
+@import "../../bower_components/mizzou-framework/src/scss/_mizzou-signature"; 
+@import "../../bower_components/mizzou-framework/src/scss/_grid";
+@import "../../bower_components/mizzou-framework/src/scss/_skip-to-links";
+@import "../../bower_components/mizzou-framework/src/scss/_search-forms";
+@import "../../bower_components/mizzou-framework/src/scss/_navigation";
+
+@media print 
+{
+    @import "../../bower_components/mizzou-framework/src/scss/_print";
+}
+/* @end */ 
+
+/* @group Font Embeds */
+
+@include font-proxima-nova(
+    $thin-200:          'true',
+    $light-300:         'true',
+    $regular-400:       'true',
+    $medium-500:        'true',
+    $semibold-600:      'true',
+    $bold-700:          'true',
+    $extrabold-800:     'true',
+    $black-900:         'true'
+);
+/* @end */ 
+
+html,
+body {
+    height: 100%;
+}
+body {
+    background-color: #222;
+}
+
+.skip-to-content {
+    @include skip-to-content();
+}
+
+
+.mu-sig__layer {
+    background-color: #222;
+    padding: 1em 0;
+}
+.mu-sig {
+    @include mu-sig(
+        $size:             'small',  
+        $color:            'white'
+    );
+    @include center-block(
+        $base-max-width,
+        $base-min-width
+    );
+    padding: 0 1em;
+}
+
+
+header {
+    background-color: $gold-400;
+    padding: 1.5em 0;    
+}
+.header__title {
+    @include center-block(
+        $base-max-width,
+        $base-min-width
+    );
+    padding: 0 1em;
+    
+    h1 {
+        font-size: 1.5em;
+        margin: 0 0 .5em 0;
+        
+        a {
+            color: #000;
+            
+            &:hover,
+            &:focus {
+                color: $red-400;
+            }
+        }
+        
+        span {
+            display: block;
+            font-weight: $font-light;
+            font-size: 5rem;
+            line-height: .9;
+            margin-bottom: .25rem;
+            margin-left: -.05em;
+        }
+    }
+    
+    @media #{$query-small} {
+        h1 {
+            font-size: 1.1em;
+        }
+        h1 span {
+            font-size: 3rem;
+            font-weight: $font-normal;
+        }
+    }
+}
+
+
+main {
+    background-color: #fff;    
+    
+    h1 {
+        color: $red-400;
+        font-weight: $font-light;
+        font-size: 3em;
+        margin: 0;
+        
+        @media #{$query-small} {
+            font-size: 2.5em;   
+        }
+    }
+    h2 {
+        border-bottom: 1px solid $gold-400;
+        margin: 1em 0;
+        
+        @media #{$query-small} {
+            font-size: 1.8em;   
+        }
+    }
+    
+}    
+.main__container {
+    @include center-block(
+        $base-max-width,
+        $base-min-width
+    );
+    @include clear-fix();
+    
+    nav {
+        margin-bottom: 2em;
+    }
+    section {
+        padding: 0 1rem;
+    }
+    
+    @media #{$query-large} {
+    
+        section {
+            @include grid-column(4, 5, $padding-right: 2rem, $padding-left: 1rem);
+            padding-top: 2em;
+        }
+    }
+}       
+    
+@media #{$query-medium} { 
+    
+    .nav--site {
+        @include vertical-navigation(
+            $color: 'gold',
+            $include-mobile-menu: true
+        );
+    }
+    .nav__list {
+        margin: 0;
+    }
+}    
+@media #{$query-large} {
+    
+    nav {
+        @include grid-column(1, 5, $float-direction: right, $padding-right: 1rem);
+        padding-top: 2em;
+    }
+    
+    .nav--site {
+        
+         .nav__list {
+            list-style: none;
+            padding-left: 0;
+            
+            ul {
+                padding-left: 1.5em;
+                font-size: .9em;
+                margin-bottom: 1.5em;
+                margin-top: 1em;
+                
+                .nav__item {
+                    margin-bottom: .5em;
+                }
+            }
+            
+            a {
+                color: $grey-500;
+                text-decoration: none;
+                
+                &:hover,
+                &:focus {
+                    color: $red-400;
+                }
+            }
+        }
+        .nav__item {
+            line-height: 1;
+            margin-bottom: 1em;
+            display: block;
+            
+            a {
+                display: block;
+            }
+        }
+        .nav__current-page {
+            color: $red-400;
+            position: relative;
+            
+            &:before { 
+                content: "";
+                width: .5em;
+                height: .5em;
+                background-color: $red-400;
+                position: absolute;
+                border-radius: 1000px;
+                left: -1.5em;
+                top: .25em;
+            }
+        }  
+    }
+    
+    #mobile-nav,
+    .nav__menu-button {
+        display: none;
+    }
+}
+
+
+footer {
+    background-color: #222;
+    padding: 2em 0;
+    color: $grey-200;
+    
+    a {
+        color: $grey-200;
+        
+        &:hover,
+        &:focus {
+            color: $gold-400;
+        }
+    }
+    .legal-text {
+        font-size: .8em;
+        
+        p {
+            margin: .5rem 0;
+        }
+    }
+ }   
+.footer__container {
+    @include center-block(
+        $base-max-width,
+        $base-min-width
+    );
+    padding: 0 1rem;
+}
+
+
+
+/* @group Pagination */
+
+.pagination
+{
+    @include clear-fix();
+    list-style: none;
+    border-top: 1px solid $gold-400;
+    margin: 2em 0;
+    padding: 1em 0 0 0;
+    
+    a
+    {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $grey-400;
+        
+        &:hover,
+        &:focus,
+        &:active
+        {
+            color: $red-500;
+        }
+    }
+}
+
+.pagination__previous
+{
+    @include grid-column(
+        $x: 1,
+        $y: 2,
+        $padding-left: 0
+    );
+}
+
+.pagination__next
+{
+    @include grid-column(
+        $x: 1,
+        $y: 2,
+        $padding-right: 0,
+        $float-direction: right
+    );
+    text-align: right;
+}
+
+/* @end */
+
+
+/* @group Source Code and Syntax Highlighting */
+
+.source-code
+{
+    background: lighten($grey-100, 3%);
+    padding: 16px;
+}
+
+.source-code--hide
+{
+    display: none;
+}
+
+.source-code-button
+{
+    @include button(
+        $color: 'gold'
+    );
+    font-weight: $font-normal;
+    padding: 5px 16px 3px;
+    text-transform: uppercase;
+    clear: both;
+    user-select: none;
+}
+
+.source-code-button--hide-source
+{
+    margin-bottom: 16px;
+}
+
+.source-code-button--show-source:nth-last-child(2)
+{
+    margin-bottom: 0;
+}
+
+// @see Prism JS (http://prismjs.com)
+code[class*='language-'],
+pre[class*='language-']
+{
+    color: $grey-500;
+	font-family: $font-monospace;
+	font-size: 13px;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	
+	h3
+    {
+        font-family: $font-sans;
+        text-transform: uppercase;
+        font-size: .9em;
+        color: $grey-400;
+        padding-bottom: 4px;
+        border-bottom: 1px solid $grey-200;
+        margin: 16px 0;
+        
+        &:first-child
+        {
+            margin-top: 0;
+        }
+    }
+}
+
+// Code blocks
+pre[class*='language-'] 
+{
+	overflow: scroll;
+	margin: 0;
+}
+
+// Inline code
+:not(pre) > code[class*='language-'] 
+{
+    background: lighten($grey-100, 3%);
+	padding: 2px 4px;
+    margin-right: 2px;
+    border: 1px solid $grey-200;
+    border-radius: 4px;
+	white-space: nowrap;
+}
+
+.token
+{
+    &.cdata,
+    &.comment,
+    &.doctype,
+    &.entity,
+    &.operator,
+    &.prolog,
+    &.punctuation,
+    &.url
+    {
+    	color: $grey-400;
+    }
+    
+    &.function,
+    &.boolean,
+    &.constant,
+    &.deleted,
+    &.number,
+    &.property,
+    &.symbol,
+    &.tag
+    {
+    	color: $blue-500;
+    }
+    
+    &.attr-name,
+    &.builtin,
+    &.char,
+    &.inserted,
+    &.selector,
+    &.string
+    {
+        color: $green-500;
+    }
+    
+    &.atrule,
+    &.attr-value,
+    &.keyword
+    {
+    	color: $red-400;
+    }
+    
+    &.important,
+    &.regex,
+    &.variable
+    {
+    	color: $orange-500;
+    }
+    
+    &.bold,
+    &.important
+    {
+    	font-weight: bold;
+    }
+    
+    &.italic
+    {
+    	font-style: italic;
+    }
+    
+    &.entity
+    {
+    	cursor: help;
+    }
+}
+
+.namespace
+{
+	opacity: .7;
+}
+
+/* @end */

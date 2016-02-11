@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    
+    <title>Mizzou Framework // University of Missouri</title>
+    
+    <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	
+	<!-- Favicon -->
+	<link href="images/favicon.ico" rel="icon"/>
+	
+	<!-- Apple Touch Icons -->
+	<link href="images/apple-touch-icon.png" rel="apple-touch-icon-precomposed"/>
+    <meta content="Framework" name="apple-mobile-web-app-title"/>
+	
+	<!-- Microsoft Windows 8+ Tiles -->
+    <meta content="Framework" name="application-name"/>
+    <meta content="images/microsoft-pinned-site.png" name="msapplication-TileImage"/>
+    <meta content="#f1b82d" name="msapplication-TileColor"/>
+    
+    <!-- CSS -->
+    <!--[if gt IE 8]><!--><link href="css/style.css" rel="stylesheet"/><!--<![endif]-->
+    <!--[if lte IE 8]><link href="css/text-only.css" rel="stylesheet" /><![endif]-->
+    
+    <!-- JS -->
+    
+    
+</head>
+<body>
+
+    <!--[if lte IE 8]>
+    <p class="alert">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <a href="#content" class="skip-to-content">Skip to Content</a>
+    <a href="#nav" class="skip-to-content">Skip to Navigation</a>
+    
+    
+    <div class="mu-sig__layer">    
+        <div class="mu-sig">
+            <p class="mu-sig__logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
+            <h2 class="mu-sig__wordmark"><a href="http://missouri.edu">University of Missouri</a></h2>
+        </div>
+    </div>    
+    <header role="banner">
+        <div class="header__title">
+            <h1>
+                <a href="#"><span class="header__title__name">Mizzou Framework</span> Style Guide and Digital&#160;Standards</a>
+            </h1>
+        </div>
+    </header>
+    
+    <main role="main">
+        
+        <div class="main__container">
+            
+            <nav role="navigation" class="nav--site" id="nav" tabindex="-1">
+                <div class="nav__container">
+                    <ul class="nav__list">
+                        <li class="nav__item"><span class="nav__current-page">General Principles</span>
+                            <ul class="nav__list">
+                                <li class="nav__item"><a href="#" class="nav__link">Nav Item</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Nav Item</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Nav Item</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Nav Item</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Nav Item</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav__item"><a href="#" class="nav__link">Colors</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Typography</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Forms and Buttons</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Images and Video</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Lists, Tables. and Rules</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Grid System and Layout</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Navigation</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Mizzou Signatures</a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <section id="content" tabindex="-1">
+                <h1 class="section__title">General Principles</h1>
+
+                <div class="section__topic" id="introduction">
+                    <h2 class="section__topic__title">Introduction</h2>
+        
+                    <h3>This website serves two purposes</h3>
+    
+                    <ol class="list--spaced">
+                        <li>To document standard styles and patterns established by the <a href="https://bitbucket.org/hughesjd/undergraduate-studies-boilerplate">Undergraduate Studies Boilerplate</a>, which is used for most <a href="http://undergraduatestudies.missouri.edu">Undergraduate Studies</a> projects. These styles and patterns are designed to adhere to the <a href="http://identity.missouri.edu">Mizzou Identity&#160;Standards</a>.</li>
+                        <li>To document important goals and strategies used in the building of Undergraduate Studies websites.</li>
+                    </ol>
+                    
+                    <p>Nullam quis risus eget <code class="language-sass">.class-example</code> urna mollis ornare vel eu leo.</p>
+                    
+                </div>
+                
+<div class="source-code"><pre class="language-markup"><h3>Markup</h3><code class="language-markup">&lt;div class=&quot;button-example button-example--dark&quot;&gt;
+    &lt;p&gt;&lt;a href=&quot;http://undergraduatestudies.missouri.edu&quot; class=&quot;button--dark-brown--large&quot;&gt;Brown Button&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://undergraduatestudies.missouri.edu&quot; class=&quot;button--dark-gold--large&quot;&gt;Gold Button&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://undergraduatestudies.missouri.edu&quot; class=&quot;button--dark-grey--large&quot;&gt;Grey Button&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code><h3>SASS CSS</h3><code class="language-sass">.button--dark-brown--large
+{
+    @include button(
+        $size: &#039;large&#039;,
+        $color: &#039;brown&#039;,
+        $theme: &#039;dark&#039;
+    );
+}
+
+.button--dark-gold--large
+{
+    @include button(
+        $size: &#039;large&#039;,
+        $color: &#039;gold&#039;,
+        $theme: &#039;dark&#039;
+    );
+}
+
+.button--dark-grey--large
+{
+    @include button(
+        $size: &#039;large&#039;,
+        $color: &#039;grey&#039;,
+        $theme: &#039;dark&#039;
+    );
+}
+</code></pre></div>
+                        
+                <ul class="pagination">
+                    <li class="pagination__previous"><a href="#">&#8592; Prev</a></li>
+                    <li class="pagination__next"><a href="#">Next &#8594;</a></li>
+                </ul>
+                        
+            </section>
+            
+        </div>
+        
+    </main>
+    
+    <div id="mobile-nav"></div>
+    
+    <footer role="contentinfo">
+        <div class="footer__container">
+            <div class="legal-text">
+                <p class="legal-text__published-by">Published by <a href="#">Mizzou Creative</a>.</p>
+                <p class="legal-text__copyright">&#169; 2016 &#8212; Curators of the <a href="http://missouri.edu">University of Missouri</a>. All rights reserved. <a href="http://missouri.edu/dmca/">DMCA</a> and <a href="http://missouri.edu/copyright/">other copyright information</a>. An <a href="http://missouri.edu/eeo-aa/">equal opportunity/access/affirmative action/pro-disabled and veteran&#160;employer</a>.</p>
+            </div>        
+        </div>
+    </footer>
+    
+    <!--[if !lt IE 9]><!-->
+    <script src="js/script.js"></script>
+    <!--<![endif]-->
+    
+</body>
+</html>
