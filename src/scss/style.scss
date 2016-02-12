@@ -15,8 +15,8 @@ $base-margin:                   1.5;
 /* @group Media Queries */
 
 $query-small:                 'screen and (max-width: 700px)';
-$query-medium:                'screen and (max-width: 900px)';
-$query-large:                 'screen and (min-width: 900px)';
+$query-medium:                'screen and (max-width: 950px)';
+$query-large:                 'screen and (min-width: 951px)';
 
 /* @end */ 
 
@@ -86,7 +86,7 @@ body {
 
 
 header {
-    background-color: $gold-400;
+    background-color: $gold;
     padding: 1.5em 0;    
 }
 .header__title {
@@ -101,7 +101,7 @@ header {
         margin: 0 0 .5em 0;
         
         a {
-            color: #000;
+            color: $warm-grey-500;
             
             &:hover,
             &:focus {
@@ -111,7 +111,7 @@ header {
         
         span {
             display: block;
-            font-weight: $font-light;
+            font-weight: $font-thin;
             font-size: 5rem;
             line-height: .9;
             margin-bottom: .25rem;
@@ -132,27 +132,7 @@ header {
 
 
 main {
-    background-color: #fff;    
-    
-    h1 {
-        color: $red-400;
-        font-weight: $font-light;
-        font-size: 3em;
-        margin: 0;
-        
-        @media #{$query-small} {
-            font-size: 2.5em;   
-        }
-    }
-    h2 {
-        border-bottom: 1px solid $gold-400;
-        margin: 1em 0;
-        
-        @media #{$query-small} {
-            font-size: 1.8em;   
-        }
-    }
-    
+    background-color: #fff;        
 }    
 .main__container {
     @include center-block(
@@ -171,7 +151,7 @@ main {
     @media #{$query-large} {
     
         section {
-            @include grid-column(4, 5, $padding-right: 2rem, $padding-left: 1rem);
+            @include grid-column(4, 5, $padding-right: 2.5rem, $padding-left: 1rem);
             padding-top: 2em;
         }
     }
@@ -180,13 +160,205 @@ main {
 @media #{$query-medium} { 
     
     .nav--site {
-        @include vertical-navigation(
+        /*@include vertical-navigation(
             $color: 'gold',
             $include-mobile-menu: true
         );
+        @include custom-vertical-navigation(
+            $color-border: $grey-200,
+            $color-link: $grey-500,
+            $color-link-background-highlight: #fff,
+            $color-link-background: #fff,
+            $color-link-hover: $red-400,
+            $color-link-background-highlight-hover: #fff,
+            $color-link-background-hover: #fff,
+            $color-sub-menu-border: transparent,
+            $color-sub-menu-link: $grey-500,
+            $color-sub-menu-link-background: #fff,
+            $color-sub-menu-link-hover: $red-400,
+            $color-sub-menu-link-background-hover: #fff,
+            $include-mobile-menu: true
+        );
     }
-    .nav__list {
-        margin: 0;
+    
+    .nav__container {
+        & > .nav__list {
+            margin: 0;
+            border-bottom: solid 1px $grey-200;
+            border-top: solid 1px $grey-200;
+            
+            & > li .nav__list {
+                border: none;
+                
+                .nav__link {
+                    margin-left: 2.5em;
+                }
+            }
+        }*/
+        
+        &.nav--hide 
+        {
+            .nav__menu-button__header:before,
+            .nav__menu-button__header:after,
+            .nav__menu-button:after
+            {
+                transform: none;
+            }
+            
+            .nav__list
+            {
+                display: none;
+            }
+        }
+        
+        .nav__list
+        {
+            height: auto;
+        }
+        
+        .nav__menu-button
+        {
+            position: relative;
+            cursor: pointer;
+            min-width: 56px;
+            text-transform: uppercase;
+            padding: 16px 16px 16px 56px;
+            min-height: 54px;
+            text-decoration: none;
+            display: block;
+            font-weight: $font-bold;
+            border-bottom: 1px solid $grey-200;
+            border-top: 1px solid $grey-200;
+            background-color: $grey-100;
+            
+            &:hover,
+            &:focus
+            {
+                background-color: $gold-100;
+                            
+                .nav__menu-button__header
+                {
+                    color: $red-400;
+                }
+                
+                .nav__menu-button__header:before,
+                .nav__menu-button__header:after,
+                &:after
+                {
+                    background: $red-400;
+                }
+            }
+        }
+        
+        .nav__menu-button__header
+        {
+            font-size: 18px;
+            line-height: 1.2;
+            color: $red-400;
+            margin: 0;
+            display: block;
+        }
+        
+        // Hamburger button bars
+        .nav__menu-button__header:before,
+        .nav__menu-button__header:after,
+        .nav__menu-button:after
+        {
+            content: ' ';
+            display: block;
+            width: 24px;
+            height: 4px;
+            border-radius: 2px;
+            background: $red-400;
+            position: absolute;
+            left: 16px;
+        }
+        
+        // Top and bottom bar
+        .nav__menu-button__header:before,
+        .nav__menu-button:after
+        {
+            transition: 0.1s transform linear;
+        }
+        
+        // Top bar
+        .nav__menu-button__header:before
+        {
+            top: 16px;
+            transform: translateY(8px) rotate(45deg);
+        }
+        
+        // Middle bar
+        .nav__menu-button__header:after
+        {
+            top: 24px;
+            transform: scale(0);
+        }
+        
+        // Bottom bar
+        .nav__menu-button:after
+        {
+            top: 32px;      
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+    .nav--site {
+        
+        background-color: #fff;
+        
+        .nav__container > .nav__list {
+            padding: 1em 1em;
+            margin: 0;
+            border-bottom: 1px solid $grey-200;
+            background-color: $grey-100;
+        }
+        
+         .nav__list {
+            list-style: none;
+            padding-left: 0;
+            font-size: 1.2em;
+            
+            ul {
+                padding-left: 1.5em;
+                font-size: .9em;
+                margin-bottom: 1em;
+                //margin-top: 1em;
+                
+                .nav__item {
+                    //margin-bottom: .5em;
+                }
+            }
+            
+            a {
+                color: $grey-500;
+                text-decoration: none;
+                
+                &:hover,
+                &:focus {
+                    color: $red-400;
+                }
+            }
+        }
+        .nav__item {
+            line-height: 1;
+            //margin-bottom: 1em;
+            display: block;
+            
+            a,
+            strong {
+                display: block;
+                padding: .5em 0;
+            }
+        }
+        .nav__current-page {
+            color: $red-400;
+            position: relative;
+        }  
+    }
+    #mobile-nav {
+        .nav__container > .nav__list {
+            border-top: 1px solid $grey-200;
+        }
     }
 }    
 @media #{$query-large} {
@@ -243,8 +415,8 @@ main {
                 background-color: $red-400;
                 position: absolute;
                 border-radius: 1000px;
-                left: -1.5em;
-                top: .25em;
+                left: -1em;
+                top: .35em;
             }
         }  
     }
@@ -285,6 +457,89 @@ footer {
     padding: 0 1rem;
 }
 
+
+
+/* @group Content */
+
+.section__topic
+{
+    @include clear-fix();
+    margin-bottom: $base-margin + 0em;
+}
+
+.section__title 
+{
+    color: $red-400;
+    font-weight: $font-light;
+    font-size: 3em;
+    margin: 0;
+    
+    @media #{$query-small} {
+        font-size: 2.5em;   
+    }
+}
+
+.section__topic__title
+{
+    border-bottom: 1px solid $gold-300;
+    margin: 1em 0;
+    
+    @media #{$query-small} {
+        font-size: 1.8em;   
+    }
+}
+
+.section__topic h3
+{
+    margin: 1em 0;
+    font-size: 1.25em;
+    font-weight: $font-bold;
+    color: $warm-grey-400;
+    text-transform: uppercase;
+}
+
+.section__row
+{
+
+}
+
+.section__column
+{
+    margin-bottom: $base-margin + 0em;
+    
+    @media #{$query-small}
+    {
+        @include grid-column(
+            $x: 1,
+            $y: 1,
+            $padding-left: 0
+        );
+    }
+
+    @include grid-column(
+        $x: 1,
+        $y: 2,
+        $padding-left: 0
+    );
+    
+    @media #{$query-large}
+    {
+        @include grid-column(
+            $x: 1,
+            $y: 3,
+            $padding-left: 0
+        );
+    }
+}
+
+.button__download {
+    @include button(
+        $size: 'large',
+        $color: 'gold'
+    );
+}
+
+/* @end */
 
 
 /* @group Pagination */
@@ -337,7 +592,8 @@ footer {
 
 /* @group Source Code and Syntax Highlighting */
 
-.source-code
+.source-code,
+.source
 {
     background: lighten($grey-100, 3%);
     padding: 16px;
@@ -500,3 +756,943 @@ pre[class*='language-']
 }
 
 /* @end */
+
+
+
+
+
+
+/* @group Colors */
+    
+.color-swatch
+{
+    @include clear-fix;
+    margin: 0;
+        
+    p 
+    {
+        margin: 0;
+    }
+}
+
+.color-swatch__description
+{
+    font-weight: normal;
+    
+    &:before
+    {
+        width: 96px;
+        height: 96px;
+        display: block;
+        float: left;
+        content: ' ';
+        margin-right: 16px;
+        position: relative;
+        top: 0;
+        border-style: solid;
+        border-width: 1px;
+        border-bottom-width: 0;
+        
+        @media #{$query-small}
+        {
+            width: 220px;
+        }
+        
+    }
+}
+
+.color-swatch__name
+{
+    font-weight: $font-bold;
+    padding-top: 8px;
+    padding-bottom: .5em;
+}
+
+.color-swatch__hex-code
+{
+    font-family: $font-monospace;
+    font-size: 12px;
+    color: $grey-400;
+    white-space: nowrap;
+}
+
+.color-swatch__var
+{
+    font-family: $font-monospace;
+    font-size: 11px;
+    color: $grey-400;
+    white-space: nowrap;
+}
+
+.color-swatch--black .color-swatch__description:before
+{
+    background: $black;
+    border-color: $black;
+}
+
+.color-swatch--gold-100 .color-swatch__description:before
+{
+    background: $gold-100;
+    border-color: darken($gold-100, 10%);
+}
+
+.color-swatch--gold-200 .color-swatch__description:before
+{
+    background: $gold-200;
+    border-color: darken($gold-200, 10%);
+}
+
+.color-swatch--gold-300 .color-swatch__description:before
+{
+    background: $gold-300;
+    border-color: darken($gold-300, 10%);
+}
+
+.color-swatch--gold-400 .color-swatch__description:before
+{
+    background: $gold-400;
+    border-color: darken($gold-400, 10%);
+}
+
+.color-swatch--gold-500 .color-swatch__description:before
+{
+    background: $gold-500;
+    border-color: darken($gold-500, 10%);
+}
+
+.color-swatch--gold-600 .color-swatch__description:before
+{
+    background: $gold-600;
+    border-color: darken($gold-600, 10%);
+    border-bottom-width: 1px;
+}
+
+.color-swatch--grey-100 .color-swatch__description:before
+{
+    background: $grey-100;
+    border-color: darken($grey-100, 10%);
+}
+
+.color-swatch--grey-200 .color-swatch__description:before
+{
+    background: $grey-200;
+    border-color: darken($grey-200, 10%);
+}
+
+.color-swatch--grey-300 .color-swatch__description:before
+{
+    background: $grey-300;
+    border-color: darken($grey-300, 10%);
+}
+
+.color-swatch--grey-400 .color-swatch__description:before
+{
+    background: $grey-400;
+    border-color: darken($grey-400, 10%);
+}
+
+.color-swatch--grey-500 .color-swatch__description:before
+{
+    background: $grey-500;
+    border-color: darken($grey-500, 10%);
+}
+
+.color-swatch--grey-600 .color-swatch__description:before
+{
+    background: $grey-600;
+    border-color: darken($grey-600, 10%);
+    border-bottom-width: 1px;
+}
+
+.color-swatch--tan-100 .color-swatch__description:before
+{
+    background: $tan-100;
+    border-color: darken($tan-100, 10%);
+}
+
+.color-swatch--tan-200 .color-swatch__description:before
+{
+    background: $tan-200;
+    border-color: darken($tan-200, 10%);
+}
+
+.color-swatch--tan-300 .color-swatch__description:before
+{
+    background: $tan-300;
+    border-color: darken($tan-300, 10%);
+}
+
+.color-swatch--tan-400 .color-swatch__description:before
+{
+    background: $tan-400;
+    border-color: darken($tan-400, 10%);
+}
+
+.color-swatch--tan-500 .color-swatch__description:before
+{
+    background: $tan-500;
+    border-color: darken($tan-500, 10%);
+}
+
+.color-swatch--tan-600 .color-swatch__description:before
+{
+    background: $tan-600;
+    border-color: darken($tan-600, 10%);
+    border-bottom-width: 1px;
+}
+
+.color-swatch--warm-grey-100 .color-swatch__description:before
+{
+    background: $warm-grey-100;
+    border-color: darken($warm-grey-100, 10%);
+}
+
+.color-swatch--warm-grey-200 .color-swatch__description:before
+{
+    background: $warm-grey-200;
+    border-color: darken($warm-grey-200, 10%);
+}
+
+.color-swatch--warm-grey-300 .color-swatch__description:before
+{
+    background: $warm-grey-300;
+    border-color: darken($warm-grey-300, 10%);
+}
+
+.color-swatch--warm-grey-400 .color-swatch__description:before
+{
+    background: $warm-grey-400;
+    border-color: darken($warm-grey-400, 10%);
+}
+
+.color-swatch--warm-grey-500 .color-swatch__description:before
+{
+    background: $warm-grey-500;
+    border-color: darken($warm-grey-500, 10%);
+}
+
+.color-swatch--warm-grey-600 .color-swatch__description:before
+{
+    background: $warm-grey-600;
+    border-color: darken($warm-grey-600, 10%);
+    border-bottom-width: 1px;
+}
+
+.color-swatch--red-100 .color-swatch__description:before
+{
+    background: $red-100;
+    border-color: darken($red-100, 10%);
+}
+
+.color-swatch--red-200 .color-swatch__description:before
+{
+    background: $red-200;
+    border-color: darken($red-200, 10%);
+}
+
+.color-swatch--red-300 .color-swatch__description:before
+{
+    background: $red-300;
+    border-color: darken($red-300, 10%);
+}
+
+.color-swatch--red-400 .color-swatch__description:before
+{
+    background: $red-400;
+    border-color: darken($red-400, 10%);
+}
+
+.color-swatch--red-500 .color-swatch__description:before
+{
+    background: $red-500;
+    border-color: darken($red-500, 10%);
+}
+
+.color-swatch--red-600 .color-swatch__description:before
+{
+    background: $red-600;
+    border-color: darken($red-600, 10%);
+    border-bottom-width: 1px;
+}
+
+.color-swatch--orange-100 .color-swatch__description:before
+{
+    background: $orange-100;
+    border-color: darken($orange-100, 10%);
+}
+
+.color-swatch--orange-200 .color-swatch__description:before
+{
+    background: $orange-200;
+    border-color: darken($orange-200, 10%);
+}
+
+.color-swatch--orange-300 .color-swatch__description:before
+{
+    background: $orange-300;
+    border-color: darken($orange-300, 10%);
+}
+
+.color-swatch--orange-400 .color-swatch__description:before
+{
+    background: $orange-400;
+    border-color: darken($orange-400, 10%);
+}
+
+.color-swatch--orange-500 .color-swatch__description:before
+{
+    background: $orange-500;
+    border-color: darken($orange-500, 10%);
+}
+
+.color-swatch--orange-600 .color-swatch__description:before
+{
+    background: $orange-600;
+    border-color: darken($orange-600, 10%);
+    border-bottom-width: 1px;
+}
+
+.color-swatch--blue-100 .color-swatch__description:before
+{
+    background: $blue-100;
+    border-color: darken($blue-100, 10%);
+}
+
+.color-swatch--blue-200 .color-swatch__description:before
+{
+    background: $blue-200;
+    border-color: darken($blue-200, 10%);
+}
+
+.color-swatch--blue-300 .color-swatch__description:before
+{
+    background: $blue-300;
+    border-color: darken($blue-300, 10%);
+}
+
+.color-swatch--blue-400 .color-swatch__description:before
+{
+    background: $blue-400;
+    border-color: darken($blue-400, 10%);
+}
+
+.color-swatch--blue-500 .color-swatch__description:before
+{
+    background: $blue-500;
+    border-color: darken($blue-500, 10%);
+}
+
+.color-swatch--blue-600 .color-swatch__description:before
+{
+    background: $blue-600;
+    border-color: darken($blue-600, 10%);
+    border-bottom-width: 1px;
+}
+
+.color-swatch--green-100 .color-swatch__description:before
+{
+    background: $green-100;
+    border-color: darken($green-100, 10%);
+}
+
+.color-swatch--green-200 .color-swatch__description:before
+{
+    background: $green-200;
+    border-color: darken($green-200, 10%);
+}
+
+.color-swatch--green-300 .color-swatch__description:before
+{
+    background: $green-300;
+    border-color: darken($green-300, 10%);
+}
+
+.color-swatch--green-400 .color-swatch__description:before
+{
+    background: $green-400;
+    border-color: darken($green-400, 10%);
+}
+
+.color-swatch--green-500 .color-swatch__description:before
+{
+    background: $green-500;
+    border-color: darken($green-500, 10%);
+}
+
+.color-swatch--green-600 .color-swatch__description:before
+{
+    background: $green-600;
+    border-color: darken($green-600, 10%);
+    border-bottom-width: 1px;
+}
+
+/* @end */
+
+/* @group Accessible Color Combinations */
+
+.accessible-color-combinations
+{
+    list-style: none;
+    padding: 0;
+}
+
+.accessible-color
+{
+    padding: 8px 16px;
+    border: 1px solid #000;
+}
+
+.accessible-color--gold-100
+{
+    color: $gold-100;
+}
+
+.accessible-color--gold-200
+{
+    color: $gold-200;
+}
+
+.accessible-color--gold-300
+{
+    color: $gold-300;
+}
+
+.accessible-color--gold-400
+{
+    color: $gold-400;
+}
+
+.accessible-color--gold-500
+{
+    color: $gold-500;
+}
+
+.accessible-color--gold-600
+{
+    color: $gold-600;
+}
+
+.accessible-color--white
+{
+    color: #fff;
+}
+
+.accessible-color--grey-100
+{
+    color: $grey-100;
+}
+
+.accessible-color--grey-200
+{
+    color: $grey-200;
+}
+
+.accessible-color--grey-300
+{
+    color: $grey-300;
+}
+
+.accessible-color--grey-400
+{
+    color: $grey-400;
+}
+
+.accessible-color--grey-500
+{
+    color: $grey-500;
+}
+
+.accessible-color--grey-600
+{
+    color: $grey-600;
+}
+
+.accessible-color--black
+{
+    color: #000;
+}
+
+.accessible-color--tan-100
+{
+    color: $tan-100;
+}
+
+.accessible-color--tan-200
+{
+    color: $tan-200;
+}
+
+.accessible-color--tan-300
+{
+    color: $tan-300;
+}
+
+.accessible-color--tan-400
+{
+    color: $tan-400;
+}
+
+.accessible-color--tan-500
+{
+    color: $tan-500;
+}
+
+.accessible-color--tan-600
+{
+    color: $tan-600;
+}
+
+.accessible-color--warm-grey-100
+{
+    color: $warm-grey-100;
+}
+
+.accessible-color--warm-grey-200
+{
+    color: $warm-grey-200;
+}
+
+.accessible-color--warm-grey-300
+{
+    color: $warm-grey-300;
+}
+
+.accessible-color--warm-grey-400
+{
+    color: $warm-grey-400;
+}
+
+.accessible-color--warm-grey-500
+{
+    color: $warm-grey-500;
+}
+
+.accessible-color--warm-grey-600
+{
+    color: $warm-grey-600;
+}
+
+.accessible-color--red-100
+{
+    color: $red-100;
+}
+
+.accessible-color--red-200
+{
+    color: $red-200;
+}
+
+.accessible-color--red-300
+{
+    color: $red-300;
+}
+
+.accessible-color--red-400
+{
+    color: $red-400;
+}
+
+.accessible-color--red-500
+{
+    color: $red-500;
+}
+
+.accessible-color--red-600
+{
+    color: $red-600;
+}
+
+.accessible-color--orange-100
+{
+    color: $orange-100;
+}
+
+.accessible-color--orange-200
+{
+    color: $orange-200;
+}
+
+.accessible-color--orange-300
+{
+    color: $orange-300;
+}
+
+.accessible-color--orange-400
+{
+    color: $orange-400;
+}
+
+.accessible-color--orange-500
+{
+    color: $orange-500;
+}
+
+.accessible-color--orange-600
+{
+    color: $orange-600;
+}
+
+.accessible-color--blue-100
+{
+    color: $blue-100;
+}
+
+.accessible-color--blue-200
+{
+    color: $blue-200;
+}
+
+.accessible-color--blue-300
+{
+    color: $blue-300;
+}
+
+.accessible-color--blue-400
+{
+    color: $blue-400;
+}
+
+.accessible-color--blue-500
+{
+    color: $blue-500;
+}
+
+.accessible-color--blue-600
+{
+    color: $blue-600;
+}
+
+.accessible-color--green-100
+{
+    color: $green-100;
+}
+
+.accessible-color--green-200
+{
+    color: $green-200;
+}
+
+.accessible-color--green-300
+{
+    color: $green-300;
+}
+
+.accessible-color--green-400
+{
+    color: $green-400;
+}
+
+.accessible-color--green-500
+{
+    color: $green-500;
+}
+
+.accessible-color--green-600
+{
+    color: $green-600;
+}
+
+.accessible-color-background--gold-100
+{
+    background: $gold-100;
+    border-color: darken($gold-100, 10%);
+}
+
+.accessible-color-background--gold-200
+{
+    background: $gold-200;
+    border-color: darken($gold-200, 10%);
+}
+
+.accessible-color-background--gold-300
+{
+    background: $gold-300;
+    border-color: darken($gold-300, 10%);
+}
+
+.accessible-color-background--gold-400
+{
+    background: $gold-400;
+    border-color: darken($gold-400, 10%);
+}
+
+.accessible-color-background--gold-500
+{
+    background: $gold-500;
+    border-color: darken($gold-500, 10%);
+}
+
+.accessible-color-background--gold-600
+{
+    background: $gold-600;
+    border-color: darken($gold-600, 10%);
+}
+
+.accessible-color-background--white
+{
+    background: #fff;
+    border-color: darken(#fff, 10%);
+}
+
+.accessible-color-background--grey-100
+{
+    background: $grey-100;
+    border-color: darken($grey-100, 10%);
+}
+
+.accessible-color-background--grey-200
+{
+    background: $grey-200;
+    border-color: darken($grey-200, 10%);
+}
+
+.accessible-color-background--grey-300
+{
+    background: $grey-300;
+    border-color: darken($grey-300, 10%);
+}
+
+.accessible-color-background--grey-400
+{
+    background: $grey-400;
+    border-color: darken($grey-400, 10%);
+}
+
+.accessible-color-background--grey-500
+{
+    background: $grey-500;
+    border-color: darken($grey-500, 10%);
+}
+
+.accessible-color-background--grey-600
+{
+    background: $grey-600;
+    border-color: darken($grey-600, 10%);
+}
+
+.accessible-color-background--black
+{
+    background: #000;
+    border-color: #000;
+}
+
+.accessible-color-background--tan-100
+{
+    background: $tan-100;
+    border-color: darken($tan-100, 10%);
+}
+
+.accessible-color-background--tan-200
+{
+    background: $tan-200;
+    border-color: darken($tan-200, 10%);
+}
+
+.accessible-color-background--tan-300
+{
+    background: $tan-300;
+    border-color: darken($tan-300, 10%);
+}
+
+.accessible-color-background--tan-400
+{
+    background: $tan-400;
+    border-color: darken($tan-400, 10%);
+}
+
+.accessible-color-background--tan-500
+{
+    background: $tan-500;
+    border-color: darken($tan-500, 10%);
+}
+
+.accessible-color-background--tan-600
+{
+    background: $tan-600;
+    border-color: darken($tan-600, 10%);
+}
+
+.accessible-color-background--warm-grey-100
+{
+    background: $warm-grey-100;
+    border-color: darken($warm-grey-100, 10%);
+}
+
+.accessible-color-background--warm-grey-200
+{
+    background: $warm-grey-200;
+    border-color: darken($warm-grey-200, 10%);
+}
+
+.accessible-color-background--warm-grey-300
+{
+    background: $warm-grey-300;
+    border-color: darken($warm-grey-300, 10%);
+}
+
+.accessible-color-background--warm-grey-400
+{
+    background: $warm-grey-400;
+    border-color: darken($warm-grey-400, 10%);
+}
+
+.accessible-color-background--warm-grey-500
+{
+    background: $warm-grey-500;
+    border-color: darken($warm-grey-500, 10%);
+}
+
+.accessible-color-background--warm-grey-600
+{
+    background: $warm-grey-600;
+    border-color: darken($warm-grey-600, 10%);
+}
+
+.accessible-color-background--red-100
+{
+    background: $red-100;
+    border-color: darken($red-100, 10%);
+}
+
+.accessible-color-background--red-200
+{
+    background: $red-200;
+    border-color: darken($red-200, 10%);
+}
+
+.accessible-color-background--red-300
+{
+    background: $red-300;
+    border-color: darken($red-300, 10%);
+}
+
+.accessible-color-background--red-400
+{
+    background: $red-400;
+    border-color: darken($red-400, 10%);
+}
+
+.accessible-color-background--red-500
+{
+    background: $red-500;
+    border-color: darken($red-500, 10%);
+}
+
+.accessible-color-background--red-600
+{
+    background: $red-600;
+    border-color: darken($red-600, 10%);
+}
+
+.accessible-color-background--orange-100
+{
+    background: $orange-100;
+    border-color: darken($orange-100, 10%);
+}
+
+.accessible-color-background--orange-200
+{
+    background: $orange-200;
+    border-color: darken($orange-200, 10%);
+}
+
+.accessible-color-background--orange-300
+{
+    background: $orange-300;
+    border-color: darken($orange-300, 10%);
+}
+
+.accessible-color-background--orange-400
+{
+    background: $orange-400;
+    border-color: darken($orange-400, 10%);
+}
+
+.accessible-color-background--orange-500
+{
+    background: $orange-500;
+    border-color: darken($orange-500, 10%);
+}
+
+.accessible-color-background--orange-600
+{
+    background: $orange-600;
+    border-color: darken($orange-600, 10%);
+}
+
+.accessible-color-background--blue-100
+{
+    background: $blue-100;
+    border-color: darken($blue-100, 10%);
+}
+
+.accessible-color-background--blue-200
+{
+    background: $blue-200;
+    border-color: darken($blue-200, 10%);
+}
+
+.accessible-color-background--blue-300
+{
+    background: $blue-300;
+    border-color: darken($blue-300, 10%);
+}
+
+.accessible-color-background--blue-400
+{
+    background: $blue-400;
+    border-color: darken($blue-400, 10%);
+}
+
+.accessible-color-background--blue-500
+{
+    background: $blue-500;
+    border-color: darken($blue-500, 10%);
+}
+
+.accessible-color-background--blue-600
+{
+    background: $blue-600;
+    border-color: darken($blue-600, 10%);
+}
+
+.accessible-color-background--green-100
+{
+    background: $green-100;
+    border-color: darken($green-100, 10%);
+}
+
+.accessible-color-background--green-200
+{
+    background: $green-200;
+    border-color: darken($green-200, 10%);
+}
+
+.accessible-color-background--green-300
+{
+    background: $green-300;
+    border-color: darken($green-300, 10%);
+}
+
+.accessible-color-background--green-400
+{
+    background: $green-400;
+    border-color: darken($green-400, 10%);
+}
+
+.accessible-color-background--green-500
+{
+    background: $green-500;
+    border-color: darken($green-500, 10%);
+}
+
+.accessible-color-background--green-600
+{
+    background: $green-600;
+    border-color: darken($green-600, 10%);
+}
+
+/* @end */
+
+
+

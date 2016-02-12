@@ -1,0 +1,58 @@
+{#
+/**
+ * Site Template
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ */
+#}
+{% extends 'main-template.html.twig' %}
+
+{% block header %}
+    <div class="mu-sig__layer">    
+        <div class="mu-sig">
+            <p class="mu-sig__logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
+            <h2 class="mu-sig__wordmark"><a href="http://missouri.edu">University of Missouri</a></h2>
+        </div>
+    </div>    
+    <header role="banner">
+        <div class="header__title">
+            <h1>
+                <a href="#"><span class="header__title__name">Mizzou Framework</span> Style Guide and Digital&#160;Standards</a>
+            </h1>
+        </div>
+    </header>
+{% endblock %}
+
+{% block navigation %}
+{% endblock %}
+
+{% block main %}
+    <main role="main">
+        
+        <div class="main__container">
+            {% set navigation_modifier_class = 'nav--site' %}
+            {% include 'components/navigation.html.twig' %}
+        
+            <section id="content" tabindex="-1">
+                {% if (page.content) %}
+                    {{ include(template_from_string(page.content)) }}
+                {% endif %}
+                
+                {% set pagination = site.navigation_items|menu_previous_next_page(page.current_page, false) %}
+                {% include 'components/navigation-pagination.html.twig' %}
+            </section>
+        </div>
+
+    </main>
+
+<div id="mobile-nav"></div>
+{% endblock %}
+
+{% block foot %}
+<!--[if !lt IE 9]><!-->
+<script src="{{ site.asset_url }}js/script.js"></script>
+<!--<![endif]-->
+{{ parent() }}
+{% endblock %}

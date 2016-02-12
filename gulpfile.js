@@ -39,10 +39,10 @@
     objGulp.task('browserSync', function() 
     {
         objPlugins.browserSync({
-            server: {
-                baseDir: 'dist'
-            },
-            //proxy: 'localhost:8888'
+            //server: {
+            //    baseDir: 'dist'
+            //}
+            proxy: 'localhost:8888'
         })
     });
     
@@ -121,6 +121,8 @@
         objGulp.watch('src/scss/*.scss', ['all-css']);
         objGulp.watch('src/js/*.js', ['script.js']);
         objGulp.watch('dist/*.html').on('change', objPlugins.browserSync.reload);
+        objGulp.watch('dist/*.php').on('change', objPlugins.browserSync.reload);
+        objGulp.watch('dist/*.twig').on('change', objPlugins.browserSync.reload);
         objGulp.watch('dist/css/*.css').on('change', objPlugins.browserSync.reload);
         objGulp.watch('dist/js/*.js').on('change', objPlugins.browserSync.reload);
     });
