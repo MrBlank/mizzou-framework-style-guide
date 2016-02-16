@@ -60,6 +60,19 @@ $aryAttributes['site']['navigation_items'] = array(
         array('link' => $aryAttributes['site']['base_url'] . 'index.php#download', 'title' => 'Download'),
         array('link' => $aryAttributes['site']['base_url'] . 'index.php#getting-started', 'title' => 'Getting Started')
     )),
+    array('link' => $aryAttributes['site']['base_url'] . 'unit-signatures.php', 'title' => 'Unit Signatures', 'children' => array(
+        array('link' => $aryAttributes['site']['base_url'] . 'unit-signatures.php#policy', 'title' => 'Policy'),
+        array('link' => $aryAttributes['site']['base_url'] . 'unit-signatures.php#examples', 'title' => 'Examples'),
+        array('link' => $aryAttributes['site']['base_url'] . 'unit-signatures.php#mixin', 'title' => 'Mixin Options'),
+        array('link' => $aryAttributes['site']['base_url'] . 'unit-signatures.php#anatomy', 'title' => 'Anatomy'),
+        array('link' => $aryAttributes['site']['base_url'] . 'unit-signatures.php#unit-art', 'title' => 'Creating Unit Art')
+    )),
+    array('link' => $aryAttributes['site']['base_url'] . 'university-signatures.php', 'title' => 'University Signatures', 'children' => array(
+        array('link' => $aryAttributes['site']['base_url'] . 'mizzou-signatures.php#policy', 'title' => 'Policy'),
+        array('link' => $aryAttributes['site']['base_url'] . 'mizzou-signatures.php#anatomy', 'title' => 'Anatomy'),
+        array('link' => $aryAttributes['site']['base_url'] . 'mizzou-signatures.php#mixin', 'title' => 'Mixin Options'),
+        array('link' => $aryAttributes['site']['base_url'] . 'mizzou-signatures.php#examples', 'title' => 'Examples')
+    )),
     array('link' => $aryAttributes['site']['base_url'] . 'colors.php', 'title' => 'Colors', 'children' => array(
         array('link' => $aryAttributes['site']['base_url'] . 'colors.php#mizzou-colors', 'title' => 'Mizzou Colors'),
         array('link' => $aryAttributes['site']['base_url'] . 'colors.php#palettes', 'title' => 'Color Palettes'),
@@ -97,10 +110,6 @@ $aryAttributes['site']['navigation_items'] = array(
         array('link' => $aryAttributes['site']['base_url'] . 'navigation#horizontal-navigation', 'title' => 'Horizontal Navigation'),
         array('link' => $aryAttributes['site']['base_url'] . 'navigation#mobile-menu-button', 'title' => 'Mobile Menu Button'),
         array('link' => $aryAttributes['site']['base_url'] . 'navigation#skip-to-content', 'title' => 'Skip to Content Links')
-    )),
-    array('link' => $aryAttributes['site']['base_url'] . 'signatures', 'title' => 'Mizzou Signatures', 'children' => array(
-        array('link' => $aryAttributes['site']['base_url'] . 'signatures#unit-signatures', 'title' => 'Unit Signatures'),
-        array('link' => $aryAttributes['site']['base_url'] . 'signatures#university-signatures', 'title' => 'University Signatures'),
     )),
     array('link' => $aryAttributes['site']['base_url'] . 'search', 'title' => 'Search Form and Results', 'children' => array(
         array('link' => $aryAttributes['site']['base_url'] . 'search#search-form', 'title' => 'Search Form'),

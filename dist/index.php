@@ -48,7 +48,10 @@ ob_start();
     <p>All CSS in the Mizzou Framework is <a href="http://sass-lang.com/">compiled from Sass</a> source files located in <code class="language-markup">src/scss/</code>. There is no compiled CSS version of the framework. If you do not use Sass and only need assets for creating a web signature, use the <a href="http://identity.missouri.edu/web-sig/">Mizzou Web Signatures</a> project files.
     
     <h3>Autoprefixer</h3>
-    <p><a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> is required to deal with <a href="http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm">CSS vendor prefixes</a>. If you're not using a Sass compiler that enables this or our Gulp boilerplate, you'll need to integrate Autoprefixer into your build process yourself. Our current browser support is lat 2 versions of modern browsers and IE 9+.</p>
+    <p><a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> is required to deal with <a href="http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm">CSS vendor prefixes</a>. If you're not using a Sass compiler that enables this or our Gulp boilerplate, you'll need to integrate Autoprefixer into your build process yourself.</p> 
+    
+    <h3>Browser Support</h3> 
+    <p>Our current browser support is the last 2 versions of modern browsers and Internet Explorer (IE) 9+. Versions of IE lower than 9 will not work with this framework and will receive a plain text stylesheet.</p>
     
     <h3>Images</h3>
     <p>Mizzou logos, wordmarks and graphics are available in various sizes. Exported, compressed files used in this framework are found in <code class="language-markup">dist/images/</code>. Source Adobe Illustrator files can be found in <code class="language-markup">src/images/</code>.</p>
@@ -56,7 +59,7 @@ ob_start();
     
     <h3>Fonts</h3>
     <p><a href="http://www.fontspring.com/fonts/mark-simonson-studio/proxima-nova">Proxima Nova</a> (<a href="https://typekit.com/fonts/proxima-nova">also on Typekit</a>) and <a href="http://www.myfonts.com/fonts/urw/janson/">Janson</a> are the two Web fonts used on Mizzou sites. Both require a license to use and are not included in the source files of the Framework. </p>
-    <p>Proxima Nova is the preferred default typeface with Janson as an optional decorative typeface. You don't need to purchase all weights or styles. At minimum, you would need regular, italic, bold (or semibold) and bold italic (or semibold italic). Other weights and styles are acceptable in addition. Only embed the weights you need to keep page weights down.</p>
+    <p>Proxima Nova is the preferred default typeface with Janson as an optional decorative typeface. You don't need to purchase all weights or styles. At minimum, you would need regular, italic, bold (or semibold) and bold italic (or semibold italic) of Proxima Nova. Other weights and styles are acceptable in addition. Only embed the weights you need to keep page weights down.</p>
     
     <h3>JavaScript</h3>
     <p>Some components will require JavaScript to function, such as the navigation mixin's menu button, and can be found in <code class="language-markup">src/js/</code>. The framework doesn't require <a href="https://jquery.com/">jQuery</a>, but can work in conjunction with it.</p>

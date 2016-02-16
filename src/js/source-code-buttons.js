@@ -49,10 +49,12 @@ function setupShowHideSource() {
         var objSourceCodeBlocks = document.querySelectorAll('.source-code');
         if (objSourceCodeBlocks.length > 0) {
             for (var i = 0; i < objSourceCodeBlocks.length; i++) {
-                objClassManipulation.addClass(objSourceCodeBlocks[i], 'source-code--hide');
-                var objShowSourceButton = objSourceTemplate.cloneNode(true);
-                objShowSourceButton.onclick = toggleSource;
-                objSourceCodeBlocks[i].parentNode.insertBefore(objShowSourceButton, objSourceCodeBlocks[i]);
+                if (!objClassManipulation.hasClass(objSourceCodeBlocks[i], 'source-code--no-toggle')) {
+                    objClassManipulation.addClass(objSourceCodeBlocks[i], 'source-code--hide');
+                    var objShowSourceButton = objSourceTemplate.cloneNode(true);
+                    objShowSourceButton.onclick = toggleSource;
+                    objSourceCodeBlocks[i].parentNode.insertBefore(objShowSourceButton, objSourceCodeBlocks[i]);
+                }
             }
         }
     }
