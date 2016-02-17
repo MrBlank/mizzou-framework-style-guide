@@ -20,10 +20,10 @@
 {% if (pagination.previous) or (pagination.next) %}
     <ul class="pagination{% if (pagination_modifier_class) %} {{ pagination_modifier_class }}{% endif %}">
     {% if (pagination.previous) %}
-        <li class="pagination__previous"><a href="{{ pagination.previous.link }}">Previous</a></li>
+        <li class="pagination__previous"><a href="{{ pagination.previous.link }}">&#8592; Prev</a></li>
     {% endif %}
     {% if (pagination.next) %}
-        <li class="pagination__next"><a href="{{ pagination.next.link }}">Next</a></li>
+        <li class="pagination__next"><a href="{{ pagination.next.link }}">Next &#8594;</a></li>
     {% endif %}
     </ul>
 {% endif %}

@@ -164,7 +164,7 @@ ob_start();
 {% set sass %}
 .unit-sig--center
 {
-    background: $grey-100;
+    background: $gold-400;
 
     @include mu-unit-sig(
         $size: 'medium',
@@ -247,6 +247,8 @@ $name-margin:       (Optional) Helps adjust space between unit name and wordmark
 {% endset %}
 <div class="source-code source-code--no-toggle"><pre class="language-markup"><code>{{ markup|e }}</code></pre></div>
 
+</div>
+
 <div class="section__topic" id="anatomy">
     <h2 class="section__topic__title">Anatomy</h2>
     
@@ -310,7 +312,7 @@ $name-margin:       (Optional) Helps adjust space between unit name and wordmark
     </ol>
     <h4>Create the Unit Name Sprite</h4>
     <p>Now we need to make the <a href="http://blog.teamtreehouse.com/css-sprites-with-background-positioning" title="http://blog.teamtreehouse.com/css-sprites-with-background-positioning">sprite image</a> for the unit name. We already have assets for the logo and wordmark.</p>
-    <p><img src="images/unit-name_48.svg" alt="Unit name sprite"></p>
+    <p><img src="images/unit-name-black-large.svg" alt="Unit name sprite"></p>
     <ol>
         <li>Size the artboard around the unit name. There should be 1 pixel at the top, no space on the left and right, and the bottom should be spaced accordingly:
             <ul>

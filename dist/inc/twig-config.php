@@ -56,7 +56,7 @@ $aryAttributes['site']['asset_url'] = $aryAttributes['site']['base_url'];
 // Main navigation
 $aryAttributes['site']['navigation_items'] = array(
     array('link' => $aryAttributes['site']['base_url'] . 'index.php', 'title' => 'General Principles', 'children' => array(
-        array('link' => $aryAttributes['site']['base_url'] . 'index.php#introduction', 'title' => 'Intorduction'),
+        array('link' => $aryAttributes['site']['base_url'] . 'index.php#introduction', 'title' => 'Introduction'),
         array('link' => $aryAttributes['site']['base_url'] . 'index.php#download', 'title' => 'Download'),
         array('link' => $aryAttributes['site']['base_url'] . 'index.php#getting-started', 'title' => 'Getting Started')
     )),
@@ -68,58 +68,28 @@ $aryAttributes['site']['navigation_items'] = array(
         array('link' => $aryAttributes['site']['base_url'] . 'unit-signatures.php#unit-art', 'title' => 'Creating Unit Art')
     )),
     array('link' => $aryAttributes['site']['base_url'] . 'university-signatures.php', 'title' => 'University Signatures', 'children' => array(
-        array('link' => $aryAttributes['site']['base_url'] . 'mizzou-signatures.php#policy', 'title' => 'Policy'),
-        array('link' => $aryAttributes['site']['base_url'] . 'mizzou-signatures.php#anatomy', 'title' => 'Anatomy'),
-        array('link' => $aryAttributes['site']['base_url'] . 'mizzou-signatures.php#mixin', 'title' => 'Mixin Options'),
-        array('link' => $aryAttributes['site']['base_url'] . 'mizzou-signatures.php#examples', 'title' => 'Examples')
+        array('link' => $aryAttributes['site']['base_url'] . 'university-signatures.php#policy', 'title' => 'Policy'),
+        array('link' => $aryAttributes['site']['base_url'] . 'university-signatures.php#examples', 'title' => 'Examples'),
+        array('link' => $aryAttributes['site']['base_url'] . 'university-signatures.php#mixin', 'title' => 'Mixin Options'),
+        array('link' => $aryAttributes['site']['base_url'] . 'university-signatures.php#anatomy', 'title' => 'Anatomy')
     )),
     array('link' => $aryAttributes['site']['base_url'] . 'colors.php', 'title' => 'Colors', 'children' => array(
         array('link' => $aryAttributes['site']['base_url'] . 'colors.php#mizzou-colors', 'title' => 'Mizzou Colors'),
         array('link' => $aryAttributes['site']['base_url'] . 'colors.php#palettes', 'title' => 'Color Palettes'),
         array('link' => $aryAttributes['site']['base_url'] . 'colors.php#accessible-combinations', 'title' => 'Accessible Combinations')
     )),
-    array('link' => $aryAttributes['site']['base_url'] . 'typography', 'title' => 'Typography', 'children' => array(
-        array('link' => $aryAttributes['site']['base_url'] . 'typography#typefaces', 'title' => 'Typefaces'),
-        array('link' => $aryAttributes['site']['base_url'] . 'typography#headings', 'title' => 'Headings'),
-        array('link' => $aryAttributes['site']['base_url'] . 'typography#links', 'title' => 'Links'),
-        array('link' => $aryAttributes['site']['base_url'] . 'typography#inline-styles', 'title' => 'Inline Styles'),
-        array('link' => $aryAttributes['site']['base_url'] . 'typography#text-alignment', 'title' => 'Text Alignment'),
-        array('link' => $aryAttributes['site']['base_url'] . 'typography#blockquotes', 'title' => 'Quotes'),
-        array('link' => $aryAttributes['site']['base_url'] . 'typography#pre-code', 'title' => 'Formatted Text and Code')
+    array('link' => $aryAttributes['site']['base_url'] . 'typography.php', 'title' => 'Typography', 'children' => array(
+        array('link' => $aryAttributes['site']['base_url'] . 'typography.php#proxima', 'title' => 'Proxima Nova'),
+        array('link' => $aryAttributes['site']['base_url'] . 'typography.php#janson', 'title' => 'Janson'),
+        array('link' => $aryAttributes['site']['base_url'] . 'typography.php#mono', 'title' => 'Monospace'),
+        array('link' => $aryAttributes['site']['base_url'] . 'typography.php#mixin', 'title' => 'Type Mixins'),
+        array('link' => $aryAttributes['site']['base_url'] . 'typography.php#vars', 'title' => 'Type Variables')
     )),
-    array('link' => $aryAttributes['site']['base_url'] . 'forms', 'title' => 'Forms and Buttons', 'children' => array(
-        array('link' => $aryAttributes['site']['base_url'] . 'forms#forms', 'title' => 'Forms'),
-        array('link' => $aryAttributes['site']['base_url'] . 'forms#buttons', 'title' => 'Buttons')
-    )),
-    array('link' => $aryAttributes['site']['base_url'] . 'images-video', 'title' => 'Images and Video', 'children' => array(
-        array('link' => $aryAttributes['site']['base_url'] . 'images-video#figures', 'title' => 'Figures and Images'),
-        array('link' => $aryAttributes['site']['base_url'] . 'images-video#image-replacement', 'title' => 'Image Replacement'),
-        array('link' => $aryAttributes['site']['base_url'] . 'images-video#video', 'title' => 'Video')
-    )),
-    array('link' => $aryAttributes['site']['base_url'] . 'lists-tables', 'title' => 'Lists, Tables, and Rules', 'children' => array(
-        array('link' => $aryAttributes['site']['base_url'] . 'lists-tables#lists', 'title' => 'Lists'),
-        array('link' => $aryAttributes['site']['base_url'] . 'lists-tables#tables', 'title' => 'Tables'),
-        array('link' => $aryAttributes['site']['base_url'] . 'lists-tables#horizontal-rules', 'title' => 'Horizontal Rules'),
-    )),
-    array('link' => $aryAttributes['site']['base_url'] . 'grid-system', 'title' => 'Grid System and Layout', 'children' => array(
-        array('link' => $aryAttributes['site']['base_url'] . 'grid-system#grid-system', 'title' => 'Grid System'),
-        array('link' => $aryAttributes['site']['base_url'] . 'grid-system#utility', 'title' => 'Utility Classes and Mixins'),
-    )),
-    array('link' => $aryAttributes['site']['base_url'] . 'navigation', 'title' => 'Navigation', 'children' => array(
-        array('link' => $aryAttributes['site']['base_url'] . 'navigation#vertical-navigation', 'title' => 'Vertical Navigation'),
-        array('link' => $aryAttributes['site']['base_url'] . 'navigation#horizontal-navigation', 'title' => 'Horizontal Navigation'),
-        array('link' => $aryAttributes['site']['base_url'] . 'navigation#mobile-menu-button', 'title' => 'Mobile Menu Button'),
-        array('link' => $aryAttributes['site']['base_url'] . 'navigation#skip-to-content', 'title' => 'Skip to Content Links')
-    )),
-    array('link' => $aryAttributes['site']['base_url'] . 'search', 'title' => 'Search Form and Results', 'children' => array(
-        array('link' => $aryAttributes['site']['base_url'] . 'search#search-form', 'title' => 'Search Form'),
-        array('link' => $aryAttributes['site']['base_url'] . 'search#search-results', 'title' => 'Search Results')
-    )),
-    array('link' => $aryAttributes['site']['base_url'] . 'stories', 'title' => 'News Stories', 'children' => array(
-        array('link' => $aryAttributes['site']['base_url'] . 'stories#feature-stories', 'title' => 'Feature Stories'),
-        array('link' => $aryAttributes['site']['base_url'] . 'stories#regular-stories', 'title' => 'Regular Stories')
-    )),
-    array('link' => $aryAttributes['site']['base_url'] . 'footer', 'title' => 'Footer')
+    array('link' => $aryAttributes['site']['base_url'] . 'grid.php', 'title' => 'Grid System', 'children' => array(
+        array('link' => $aryAttributes['site']['base_url'] . 'grid.php#row', 'title' => 'Grid Row'),
+        array('link' => $aryAttributes['site']['base_url'] . 'grid.php#column', 'title' => 'Grid Column'),
+        array('link' => $aryAttributes['site']['base_url'] . 'grid.php#examples', 'title' => 'Examples')
+    ))
 );
 
 // Set current page value

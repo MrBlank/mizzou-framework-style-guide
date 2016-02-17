@@ -16,3 +16,12 @@ setupNavMenuButton('.nav--site', '#mobile-nav');
 
 // Setup menu button for cloned nav example
 //setupNavMenuButton('.nav--vertical-example--with-mobile-menu-and-clone', '#mobile-menu-example-clone-target');
+
+
+// Affix 
+$('.main__container .nav__container').affix({
+  offset: {
+    top: $('.mu-sig__layer').outerHeight() + $('header').outerHeight(),
+    bottom: $('footer').outerHeight(true) + 100
+  }
+});

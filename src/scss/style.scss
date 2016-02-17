@@ -53,6 +53,13 @@ $query-large:                 'screen and (min-width: 951px)';
     $extrabold-800:     'true',
     $black-900:         'true'
 );
+@include font-janson(
+    $light-300:         'true',
+    $roman-400:         'true',
+    $medium-500:        'true',
+    $bold-700:          'true',
+    $smallcaps-400:     'true' 
+);
 /* @end */ 
 
 html,
@@ -74,7 +81,7 @@ body {
     background-color: #222;
     padding: 1em 0;
 }
-.mu-sig {
+.mu-sig-styleguide {
     @include mu-sig(
         $size:             'small',  
         $color:            'white'
@@ -353,8 +360,26 @@ main {
 @media #{$query-large} {
     
     nav {
-        @include grid-column(1, 5, $float-direction: right, $padding-right: 1rem);
+        @include grid-column(
+            1, 
+            5, 
+            $float-direction: right, 
+            $padding-right: 1rem
+        );
+    }
+    
+    .nav__container 
+    {
         padding-top: 2em;
+    
+        &.affix 
+        {
+            top: 0;
+            position: fixed;
+        }
+        &.affix-bottom {
+            position: relative
+        }
     }
     
     .nav--site {
@@ -592,7 +617,7 @@ footer {
 .source
 {
     background: lighten($grey-100, 3%);
-    padding: 16px;
+    padding: $base-margin + 0em;
     margin: ($base-margin + 0em) 0;
 }
 
@@ -615,7 +640,7 @@ footer {
 
 .source-code-button--hide-source
 {
-    margin-bottom: 16px;
+    margin-bottom: $base-margin;
 }
 
 .source-code-button--show-source:nth-last-child(2)
@@ -759,10 +784,16 @@ pre[class*='language-']
 
 /* @group signatures */
 
-.unit-sig
+.unit-sig,
+.mu-sig
 {
-    padding: 1em;
+    padding: 1.5em;
     margin: ($base-margin + 0em) 0;
+    
+    @media #{$query-small}
+    {
+        padding: 1em;
+    }
 }
     
 .unit-sig--light
@@ -900,6 +931,104 @@ pre[class*='language-']
         );
     }
 }
+
+.mu-sig--light
+{
+    background: $grey-100;
+
+    @include mu-sig(
+        $size: 'medium'
+    );
+    
+    @media #{$query-small}
+    {
+        @include mu-sig(
+            $size: 'small'
+        );
+    }
+            
+    @media #{$query-large}
+    {
+        @include mu-sig(
+            $size: 'large'
+        );
+    }
+    
+    @media print
+    {
+        @include mu-sig(
+            $size: 'large',
+            $print: 'true'
+        );
+    }
+}
+.mu-sig--dark
+{
+    background: $grey-600;
+
+    @include mu-sig(
+        $size: 'medium',
+        $color: 'white'
+    );
+    
+    @media #{$query-small}
+    {
+        @include mu-sig(
+            $size: 'small',
+            $color: 'white'
+        );
+    }
+            
+    @media #{$query-large}
+    {
+        @include mu-sig(
+            $size: 'large',
+            $color: 'white'
+        );
+    }
+    
+    @media print
+    {
+        @include mu-sig(
+            $size: 'large',
+            $print: 'true'
+        );
+    }
+}
+.mu-sig--center
+{
+    background: $gold-400;
+
+    @include mu-sig(
+        $size: 'medium',
+        $center: 'true'
+    );
+    
+    @media #{$query-small}
+    {
+        @include mu-sig(
+            $size: 'small',
+            $center: 'true'
+        );
+    }
+            
+    @media #{$query-large}
+    {
+        @include mu-sig(
+            $size: 'large',
+            $center: 'true'
+        );
+    }
+    
+    @media print
+    {
+        @include mu-sig(
+            $size: 'large',
+            $print: 'true'
+        );
+    }
+}
+
     
 /* @end */
 
@@ -1838,4 +1967,193 @@ pre[class*='language-']
 /* @end */
 
 
+/* @group Typography */
+    
+.font-examples 
+{
+    overflow: auto;
+    font-size: 13px;
+    
+    h3
+    {
+        font-family: $font-sans;
+        text-transform: uppercase;
+        font-size: .9em;
+        color: $grey-400;
+        padding-bottom: 4px;
+        border-bottom: 1px solid $grey-200;
+        margin: 0;
+    }
+    
+    p {
+        letter-spacing: 1px;
+        font-size: 2.5em;
+        margin: 0;
+    }
+    
+    .serif      { font-family: $font-serif; } 
+    .serif-sc   { font-family: $font-serif-sc; }
+    .sans       { font-family: $font-sans; }
+    .monospace  { font-family: $font-monospace; }
+    
+    .thin       { font-weight: $font-thin; }
+    .light      { font-weight: $font-light; }
+    .normal     { font-weight: $font-normal; }
+    .medium     { font-weight: $font-medium; }
+    .semibold   { font-weight: $font-semibold; }
+    .bold       { font-weight: $font-bold; }
+    .xbold      { font-weight: $font-xbold; }
+    .black      { font-weight: $font-black; }
+}    
+    
+/* @end */ 
 
+
+/* @group Grid */
+    
+.grid--basic 
+{
+    @include grid-row();
+    background-color: $grey-500;
+    margin-bottom: 1.5rem;
+
+    p 
+    {
+        margin: 0;
+        background-color: $warm-grey-100;
+        padding: 1rem;
+    }
+    .grid--article 
+    {
+        @include grid-column(
+            $x: 2, 
+            $y: 3
+        );
+    }
+    .grid--aside 
+    {
+        @include grid-column(
+            $x: 1, 
+            $y: 3
+        );
+    }
+    
+    @media #{$query-small}
+    {
+        .grid--article,
+        .grid--aside 
+        {
+            @include grid-column(
+                $x: 1, 
+                $y: 1
+            );
+        }
+    }
+}
+
+.grid--split 
+{
+    @include grid-row();
+    background-color: $grey-500;
+    margin-bottom: 1.5rem;
+
+    p 
+    {
+        margin: 0;
+        background-color: $warm-grey-100;
+        padding: 1rem;
+    }
+    .grid__column 
+    {
+        @include grid-column(
+            $x: 1, 
+            $y: 2
+        );
+    }   
+    @media #{$query-small}
+    {
+        .grid__column 
+        {
+            @include grid-column(
+                $x: 1, 
+                $y: 1
+            );
+        }
+    }
+}
+
+.grid--header__layer,
+.grid--content__layer,
+.grid--footer__layer 
+{
+    p 
+    {
+        margin: 0;
+        padding: 1rem;
+        background-color: fade-out(white, .4);
+    }
+}
+.grid--header__wrapper,
+.grid--content__wrapper,
+.grid--footer__wrapper 
+{
+    @include grid-row();
+}
+.grid--header__layer 
+{
+    background-color: $grey-500;
+
+    .grid--header 
+    {
+        @include grid-column(
+            $x: 1, 
+            $y: 1
+        );
+    }
+}
+.grid--content__layer {
+    
+    background-color: $warm-grey-100;
+
+    .grid--article 
+    {
+        @include grid-column(
+            $x: 4, 
+            $y: 6
+        );
+    }
+    .grid--aside 
+    {
+        @include grid-column(
+            $x: 2, 
+            $y: 6
+        );
+    }
+    
+    @media #{$query-small}
+    {
+        .grid--article,
+        .grid--aside 
+        {
+            @include grid-column(
+                $x: 1, 
+                $y: 1
+            );
+        }
+    }   
+}
+.grid--footer__layer 
+{
+    background-color: $grey-500;
+    margin-bottom: 2rem;
+
+    .grid--footer 
+    {
+        @include grid-column(
+            $x: 1, 
+            $y: 1
+        );
+    }
+}
+
+/* @end */ 

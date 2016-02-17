@@ -65,7 +65,7 @@
                 message: 'All CSS files have been compiled.'
             },
             sass: {
-                outputStyle: 'compressed'
+                outputStyle: 'compact'
             }
         };
         
@@ -94,6 +94,7 @@
             'bower_components/mizzou-framework/src/js/class-manipulation.js', 
             'bower_components/mizzou-framework/src/js/dom-traversal.js',
             'bower_components/mizzou-framework/src/js/menu-button.js',
+            'src/js/affix.js', 
             'src/js/source-code-buttons.js',
             'src/js/script.js',
             'bower_components/prism/prism.js',
@@ -102,7 +103,7 @@
             'bower_components/prism/components/prism-sass.js'
             ])
             .pipe(objPlugins.concat('script.js'))
-            .pipe(objPlugins.uglify(objConfiguration.uglify))
+            //.pipe(objPlugins.uglify(objConfiguration.uglify))
             .pipe(objGulp.dest(strDistPath + 'js/'));
     });
     aryDefaultTasks.push('script.js');
