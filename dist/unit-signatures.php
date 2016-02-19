@@ -210,6 +210,70 @@ ob_start();
 }{% endset %}
 <div class="source-code"><pre><h3>Markup</h3><code class="language-markup">{{ markup|e }}</code><h3>SASS CSS</h3><code class="language-sass">{{ sass|e }}</code></pre></div>
 
+
+    <h3>With Health Wordmark</h3>
+    
+{% set markup %}
+<div class="unit-sig unit-sig--health">
+    <p class="unit-sig__logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
+    <h1 class="unit-sig__unit"><a href="http://missouri.edu">Office of Programs</a></h1>
+    <h2 class="unit-sig__wordmark"><a href="http://missouri.edu">University of Missouri Health</a></h2>
+</div>
+{% endset %}
+{{ markup|raw }}
+{% set sass %}
+.unit-sig--health
+{
+    background: $grey-100;
+
+    @include mu-unit-sig(
+        $size: 'medium',
+        $name-width: 284px,
+        $name-height: 40px,
+        $name-margin: 1px,
+        $wordmark-indent: 2px,
+        $health-wordmark: 'true'
+    );
+    
+    @media #{$query-small}
+    {
+        @include mu-unit-sig(
+            $size: 'small',
+            $name-width: 194px,
+            $name-height: 27px,
+            $wordmark-indent: 1px,
+            $health-wordmark: 'true'
+        );
+    }
+            
+    @media #{$query-large}
+    {
+        @include mu-unit-sig(
+            $size: 'large',
+            $name-width: 404px,
+            $name-height: 57px,
+            $name-margin: 2px,
+            $wordmark-indent: 2px,
+            $health-wordmark: 'true'
+        );
+    }
+    
+    @media print
+    {
+        @include mu-unit-sig(
+            $size: 'large',
+            $name-width: 404px,
+            $name-height: 57px,
+            $name-margin: 2px,
+            $wordmark-indent: 2px,
+            $print: 'true',
+            $health-wordmark: 'true'
+        );
+    }
+}
+{% endset %}
+<div class="source-code"><pre><h3>Markup</h3><code class="language-markup">{{ markup|e }}</code><h3>SASS CSS</h3><code class="language-sass">{{ sass|e }}</code></pre></div>
+
         
 </div>
 
@@ -223,6 +287,7 @@ $color:             (Optional) Text color. Can be `black` or `white`. Defaults t
 $wordmark-indent:   (Optional) Helps left alignment with unit name when aligned left. Defaults to 0
 $center:            (Optional) Whether to center the signature. Defaults to false
 $print:             (Optional) Whether to set the images up for printing. Defaults to false and uses the black version of wordmark and unit name
+$health-wordmark:   (Optional) Whether to use the University of Missouri Health wordmark. Defaults to false
 {% endset %}
 <div class="source-code source-code--no-toggle"><pre class="language-markup"><code class="language-sass">{{ sass|e }}</code></pre></div>
 

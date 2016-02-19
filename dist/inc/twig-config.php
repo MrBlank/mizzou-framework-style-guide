@@ -24,11 +24,11 @@ $aryTwigOptions = array(
 $aryAttributes['site'] = array(
     'apple_mask_icon_color'     => '#000000',
     'base_url_dev'              => 'http://localhost:3000/Dropbox%20sites%20link/mizzou-framework-style-guide/dist/',
-    'base_url'                  => '',
+    'base_url'                  => 'https://uamedia.missouri.edu/mizzou-framework/',
     'detected_hostname'         => $_SERVER['HTTP_HOST'],
     'facebook_url'              => '',
     'flickr_url'                => '',
-    'hostname'                  => '',
+    'hostname'                  => 'uamedia.missouri.edu',
     'ms_tile_color'             => '#f1b82d',
     'name'                      => 'Mizzou Framework Style Guide',
     'published_by'              => 'Mizzou Creative',
@@ -89,6 +89,16 @@ $aryAttributes['site']['navigation_items'] = array(
         array('link' => $aryAttributes['site']['base_url'] . 'grid.php#row', 'title' => 'Grid Row'),
         array('link' => $aryAttributes['site']['base_url'] . 'grid.php#column', 'title' => 'Grid Column'),
         array('link' => $aryAttributes['site']['base_url'] . 'grid.php#examples', 'title' => 'Examples')
+    )),
+    array('link' => $aryAttributes['site']['base_url'] . 'mixins.php', 'title' => 'Mixins', 'children' => array(
+        array('link' => $aryAttributes['site']['base_url'] . 'mixins.php#clearfix', 'title' => 'Clearfix'),
+        array('link' => $aryAttributes['site']['base_url'] . 'mixins.php#box', 'title' => 'Box'),
+        array('link' => $aryAttributes['site']['base_url'] . 'mixins.php#center-block', 'title' => 'Center Block'),
+        array('link' => $aryAttributes['site']['base_url'] . 'mixins.php#image-replacement', 'title' => 'Image Replacement'),
+        array('link' => $aryAttributes['site']['base_url'] . 'mixins.php#child', 'title' => 'Last and First Child')
+    )),
+    array('link' => $aryAttributes['site']['base_url'] . 'print.php', 'title' => 'Print Reset', 'children' => array(
+        array('link' => $aryAttributes['site']['base_url'] . 'print.php#example', 'title' => 'Example')
     ))
 );
 

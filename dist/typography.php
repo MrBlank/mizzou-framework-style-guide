@@ -50,7 +50,7 @@ ob_start();
 
 <div class="section__topic" id="janson">
     <h2 class="section__topic__title">Janson</h2>
-    <p>MU’s official typeface is Janson and is primarily used with signatures. <a href="http://www.myfonts.com/fonts/urw/janson/">Requires a license</a> and a tracking <code class="language-sass">@import</code> link that is unique to a specific font kit.</p>
+    <p>MU&#8217;s official typeface is Janson and is primarily used with signatures. <a href="http://www.myfonts.com/fonts/urw/janson/">Requires a license</a> and a tracking <code class="language-sass">@import</code> link that is unique to a specific font kit.</p>
     <p>University and unit signatures are graphics, so you do not need the Janson typeface for signatures.</p>
     
     <div class="source">

@@ -474,8 +474,9 @@ ob_start();
 
 <div class="section__topic" id="accessible-combinations">
     <h2 class="section__topic__title">Accessible Combinations</h2>
-        <p>In order to meet Mizzou&#8217;s Accessibility guidelines, color combinations must have a contrast ratio of at least <strong>4.5:1</strong> for small text and <strong>3:1</strong> for large/bold text.  For instance, there is <strong>no</strong> combination of gold and white that meets these guidelines. In most cases a contrast ratio of <strong>7:1</strong> if preferable. If you're unsure about a color combination, it can be tested using <a href="http://webaim.org/resources/contrastchecker/">WebAIM&#8217;s Color Contrast&#160;Checker</a>.
+        <p>In order to meet Mizzou&#8217;s Accessibility guidelines, color combinations must have a contrast ratio of at least <strong>4.5:1</strong> for small text and <strong>3:1</strong> for large/bold text.  For instance, there is <strong>no</strong> combination of gold and white that meets these guidelines. In most cases a contrast ratio of <strong>7:1</strong> if preferable. If you're unsure about a color combination, it can be tested using <a href="http://webaim.org/resources/contrastchecker/">WebAIM&#8217;s Color Contrast&#160;Checker</a>.</p>
         
+        <?php /*
         <p>Here are some accessible&#160;combinations:</p>
         
         <ul class="accessible-color-combinations">
@@ -665,7 +666,7 @@ ob_start();
             <li class="accessible-color accessible-color--grey-100 accessible-color-background--green-600">Grey 100 on Green 600</li>
             <li class="accessible-color accessible-color--green-100 accessible-color-background--green-600">Green 100 on Green 600</li>
         </ul>
-    <p>
+   */?> 
 </div>
 <?php
 // Get contents
