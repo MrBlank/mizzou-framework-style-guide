@@ -97,6 +97,12 @@ $aryAttributes['site']['navigation_items'] = array(
         array('link' => $aryAttributes['site']['base_url'] . 'mixins.php#image-replacement', 'title' => 'Image Replacement'),
         array('link' => $aryAttributes['site']['base_url'] . 'mixins.php#child', 'title' => 'Last and First Child')
     )),
+    array('link' => $aryAttributes['site']['base_url'] . 'buttons.php', 'title' => 'Buttons', 'children' => array(
+        array('link' => $aryAttributes['site']['base_url'] . 'buttons.php#default', 'title' => 'Default Styles'),
+        array('link' => $aryAttributes['site']['base_url'] . 'buttons.php#overrides', 'title' => 'Overrides'),
+        array('link' => $aryAttributes['site']['base_url'] . 'buttons.php#positioning', 'title' => 'Positioning'),
+        array('link' => $aryAttributes['site']['base_url'] . 'buttons.php#custom', 'title' => 'Custom')
+    )),
     array('link' => $aryAttributes['site']['base_url'] . 'print.php', 'title' => 'Print Reset', 'children' => array(
         array('link' => $aryAttributes['site']['base_url'] . 'print.php#example', 'title' => 'Example')
     ))

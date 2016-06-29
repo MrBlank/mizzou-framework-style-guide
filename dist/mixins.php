@@ -12,13 +12,13 @@ error_reporting(E_ALL);
 
 // Page attributes
 $aryAttributes['page'] = array(
-    'title' => 'Print Reset'
+    'title' => 'Mixins'
 );
 
 // Start output buffering
 ob_start();
 ?>
-<h1 class="section__title">Print Reset</h1>
+<h1 class="section__title">Mixins</h1>
 
 <p>There are a few mixins in the framework to help with common styling needs.</p>
 

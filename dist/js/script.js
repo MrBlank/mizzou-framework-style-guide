@@ -436,7 +436,7 @@ var objClassManipulation = new ClassManipulation();
 var objSourceTemplate = document.createElement('a');
 objSourceTemplate.href = '#';
 objSourceTemplate.appendChild(document.createTextNode('+ Show Source'));
-objClassManipulation.addClass(objSourceTemplate, 'source-code-button');
+objClassManipulation.addClass(objSourceTemplate, 'button source-code-button');
 objClassManipulation.addClass(objSourceTemplate, 'source-code-button--show-source');
 
 /**
@@ -447,7 +447,7 @@ objClassManipulation.addClass(objSourceTemplate, 'source-code-button--show-sourc
 function toggleSource(objEvent)
 {
     objEvent.preventDefault();
-    var objSourceBlock = domTraversal('next', this, 'div');
+    var objSourceBlock = domTraversal('next', domTraversal('parent', this), 'div');
     if (objClassManipulation.hasClass(objSourceBlock, 'source-code--hide')) {
         objClassManipulation.removeClass(objSourceBlock, 'source-code--hide');
         this.removeChild(this.firstChild);
@@ -477,7 +477,9 @@ function setupShowHideSource() {
                     objClassManipulation.addClass(objSourceCodeBlocks[i], 'source-code--hide');
                     var objShowSourceButton = objSourceTemplate.cloneNode(true);
                     objShowSourceButton.onclick = toggleSource;
-                    objSourceCodeBlocks[i].parentNode.insertBefore(objShowSourceButton, objSourceCodeBlocks[i]);
+                    var objSourceButtonWrapper = document.createElement('p');
+                    objSourceButtonWrapper.appendChild(objShowSourceButton);
+                    objSourceCodeBlocks[i].parentNode.insertBefore(objSourceButtonWrapper, objSourceCodeBlocks[i]);
                 }
             }
         }
@@ -1167,13 +1169,14 @@ Prism.languages.js = Prism.languages.javascript;
 
 		var Extensions = {
 			'js': 'javascript',
-			'html': 'markup',
-			'svg': 'markup',
-			'xml': 'markup',
 			'py': 'python',
 			'rb': 'ruby',
 			'ps1': 'powershell',
-			'psm1': 'powershell'
+			'psm1': 'powershell',
+			'sh': 'bash',
+			'bat': 'batch',
+			'h': 'c',
+			'tex': 'latex'
 		};
 
 		if(Array.prototype.forEach) { // Check to prevent error in IE8

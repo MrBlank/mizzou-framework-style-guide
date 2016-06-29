@@ -1467,7 +1467,7 @@
         $border-size: 1px, 
         $border-color: $gold-400
     );
-}
+} 
 
 .center-block-example
 {
@@ -1514,3 +1514,70 @@
 }
 
 /* @end */ 
+
+
+/* @group Buttons */
+    
+
+.button-examples {
+    margin-bottom: $base-margin + 0em;
+    padding: $base-margin + 0em;
+    @include last-child();
+}
+   
+.buttons--light {
+    background-color: $grey-100;
+}
+
+.buttons--dark {
+    background-color: $grey-600;
+        
+    .button--secondary {
+        background-color: $grey-600;
+        color: $grey-100;
+    
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: fade-out($gold-200, .8);
+            color: $grey-100;
+        }
+    }
+}
+
+.buttons--gold {
+    background-color: $gold-400;
+    
+    .button {
+        background-color: $grey-600;
+        color: $grey-100;
+        border-color: $grey-600;
+    
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: fade-out($grey-600, .3);
+            color: $grey-100;
+            border-color: $grey-600;
+        }
+    }
+    .button--secondary { 
+        background-color: transparent;
+        color: $grey-600;
+        border-color: $grey-600;
+    
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: fade-out($gold-200, .6);
+            color: $grey-600;
+            border-color: $grey-600;
+        }
+    }
+}
+
+
+    
+/* @end */    
+    
+    

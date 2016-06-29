@@ -35,7 +35,7 @@ ob_start();
 <div class="section__topic" id="download">
     <h2 class="section__topic__title">Download</h2>
         
-    <p><a class="button__download" href="https://bitbucket.org/muwebcom/mizzou-framework/downloads">&#9662;&#160;Download Mizzou Framework</a></p>
+    <p><a class="button button--download" href="https://bitbucket.org/muwebcom/mizzou-framework/downloads">&#9662;&#160;Download Mizzou Framework</a></p>
     <p><a href="https://bitbucket.org/muwebcom/mizzou-framework">View the Mizzou Framework repository on Bitbucket</a>.</p>
 </div>
 

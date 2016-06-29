@@ -70,7 +70,7 @@
         };
         
         // Execute task
-        objGulp.src('src/scss/*.scss')
+        objGulp.src('src/scss/**/*.scss')
             .pipe(objPlugins.sass(objConfiguration.sass).on('error', objPlugins.sass.logError))
             .pipe(objPlugins.autoprefixer(objConfiguration.autoprefixer))
             .pipe(objGulp.dest(strDistPath + 'css/'))

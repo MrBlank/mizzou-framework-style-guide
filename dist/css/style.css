@@ -23,7 +23,7 @@
 /** @license MyFonts Webfont Build ID 3140068, 2015-12-11T15:15:55-0500 The fonts listed in this notice are subject to the End User License Agreement(s) entered into by the website owner. All other parties are  explicitly restricted from using the Licensed Webfonts(s). You may obtain a valid license at the URLs below. Webfont: JansonURW-Reg by URW++ URL: http://www.myfonts.com/fonts/urw/janson/urw-t-regular/ Webfont: JansonURW-Med by URW++ URL: http://www.myfonts.com/fonts/urw/janson/urw-t-medium/ Webfont: JansonURW-BolIta by URW++ URL: http://www.myfonts.com/fonts/urw/janson/urw-t-bold-italic/ Webfont: JansonURW-Lig by URW++ URL: http://www.myfonts.com/fonts/urw/janson/urw-t-light/ Webfont: JansonURW-MedIta by URW++ URL: http://www.myfonts.com/fonts/urw/janson/urw-t-medium-italic/ Webfont: JansonURWSC-Reg by URW++ URL: http://www.myfonts.com/fonts/urw/janson/urw-sc-t-regular/ Webfont: JansonURW-Bol by URW++ URL: http://www.myfonts.com/fonts/urw/janson/urw-t-bold/ Webfont: JansonURW-RegIta by URW++ URL: http://www.myfonts.com/fonts/urw/janson/urw-t-italic/ Webfont: JansonURW-LigIta by URW++ URL: http://www.myfonts.com/fonts/urw/janson/urw-t-light-italic/ License: http://www.myfonts.com/viewlicense?type=web&buildid=3140068 Licensed pageviews: 2,020,000 Webfonts copyright: (URW)++,Copyright 2006 by (URW)++ Design &amp; Development © 2015 MyFonts Inc */
 /** Add your tracking link for license, unique to each fontkit you build. Include when calling the mixin. Replace '{fontkit-id}' with the number. (This @import is placed at the top of compiled CSS file when compiled.) @import url("//hello.myfonts.net/count/{fontkit-id}");  */
 /* @end */
-/** Mizzou Framework - Sass: Base Mixins Requires: _variables.scss @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri @copyright 2015 Curators of the University of Missouri @version 1.00 */
+/** Mizzou Framework - Sass: Base Mixins Requires: _variables.scss @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri @copyright 2015 Curators of the University of Missouri @version 1.10 */
 /* @group Placeholder Selectors */
 /* The `.center-block()` mixin is a quick way to center layouts. ```html_example <div class="center-me"> <p>A Centered, block-level element.</p> </div> ``` Here are the variables that can be used: ``` @max-width   @min-width .center-me { .center-block(@bmax-width: 300px, @min-width: 150px); .box(); width: 50%; } */
 /** Sets up containing div, centered with a max-width @param unit $max-width (Optional) Width of the block. Defaults to 100% @param boolean $include-print-style (Optional) Whether to set the block to 100% for printing. Defaults to true */
@@ -61,13 +61,13 @@ u { text-decoration: none; }
 
 /* @end */
 /* @group Headings and Paragraphs */
-h1, h2, h3, h4, h5, h6, .like-h1, .like-h2, .like-h3, .like-h4, caption, .like-h5, .like-h6 { margin: 1.5em 0; font-weight: 600; color: #000; }
+h1, h2, h3, h4, h5, h6, .like-h1, .like-h2, .like-h3, .like-h4, caption, .like-h5, .like-h6 { margin: 0 0 1.5em 0; font-weight: 600; color: #000; }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .like-h1 a, .like-h2 a, .like-h3 a, .like-h4 a, caption a, .like-h5 a, .like-h6 a { text-decoration: none; }
 
-h1, .like-h1 { margin: 1.125em 0; font-size: 2.5em; line-height: 1.2; }
+h1, .like-h1 { margin: 0 0 1.125em 0; font-size: 2.5em; line-height: 1.2; }
 
-h2, .like-h2 { margin: 1.125em 0; font-size: 2em; line-height: 1.2; }
+h2, .like-h2 { margin: 0 0 1.125em 0; font-size: 2em; line-height: 1.2; }
 
 h3, .like-h3 { font-size: 1.5em; line-height: 1.3; }
 
@@ -77,13 +77,13 @@ h5, h6, .like-h5, .like-h6 { color: #666666; font-size: 1em; margin: .5em 0; }
 
 h6, .like-h6 { color: #999999; font-style: italic; }
 
-p { margin: 1.5em 0; }
+p { margin: 0 0 1.5em 0; }
 
 /* @end */
 /* @group Images, Figures, and Video */
 img { border: 0; max-width: 100%; width: auto; height: auto; }
 
-figure, .alignnone, .alignleft, .aligncenter, .alignright { margin: 1.5em 0; max-width: 100%; }
+figure, .alignnone, .alignleft, .aligncenter, .alignright { margin: 0 0 1.5em 0; max-width: 100%; }
 
 figure.center, .aligncenter { margin: 0 auto 1em auto; text-align: center; }
 
@@ -95,7 +95,7 @@ figcaption p { font-size: inherit; }
 
 iframe { border: 0; clear: both; }
 
-.video { margin: 1.5em 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.video { margin: 0 0 1.5em 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
 
 .video.video--4x3 { padding-bottom: 75%; }
 
@@ -117,25 +117,25 @@ address { font-style: normal; }
 
 /* @end */
 /* @group Horizontal Rules */
-hr { margin: 1.5em 0; clear: both; border: 0; border-bottom: 1px solid #CCCCCC; }
+hr { margin: 0 0 1.5em 0; clear: both; border: 0; border-bottom: 1px solid #CCCCCC; }
 
 /* @end */
 /* @group Lists */
-ul, ol { margin: 1.5em 0; padding-left: 2.25em; }
+ul, ol { margin: 0 0 1.5em 0; padding-left: 2.25em; }
 
 ul ul, ul ol, ol ul, ol ol { margin: 0; }
 
 li li, li p { font-size: inherit; }
 
-dl { margin: 1.5em 0; padding-left: 2.25em; }
+dl { margin: 0 0 1.5em 0; padding-left: 2.25em; }
 
 dt { font-weight: 600; }
 
-dd { margin: 0.75em 0; }
+dd { margin: 0 0 0.75em 0; }
 
 /* @end */
 /* @group Forms */
-form, fieldset { margin: 1.5em 0; }
+form, fieldset { margin: 0 0 1.5em 0; }
 
 fieldset, legend { padding: 0; border: 0; }
 
@@ -147,7 +147,7 @@ input[type='submit']::-moz-focus-inner, input[type='reset']::-moz-focus-inner, i
 
 /* @end */
 /* @group Tables */
-table { margin: 1.5em 0; border-collapse: collapse; border-spacing: 0; }
+table { margin: 0 0 1.5em 0; border-collapse: collapse; border-spacing: 0; }
 
 th, td { border: 1px solid #999999; text-align: left; }
 
@@ -305,10 +305,37 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
 
 .form__field__help { font-size: 12px; margin-bottom: 0; }
 
-/** Mizzou Framework - Sass: Buttons Requires: _variables.scss @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri @copyright 2015 Curators of the University of Missouri @version 1.00 */
-/** Sets up a button with custom attributes @param color $color-background Background color @param color $color-text Text color @param color $color-border Border color @param string $size (Optional) Text size. Can be 'small' or 'large'. Defaults to 'small' @param boolean $include-print-style (Optional) Whether to make the button black and white for printing. Defaults to true */
-/** Sets up a button with common attributes @param string $size (Optional) Text size. Can be 'small' or 'large'. Defaults to 'small' @param string $color (Optional) Button color. Can be 'brown', 'gold', or 'grey'. Defaults to 'brown' @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Dark gives the button a lighter border. Defaults to 'light' @param boolean $include-print-style (Optional) Whether to make the button black and white for printing. Defaults to true */
-/** Mizzou Framework - Sass: Mizzou Signatures Requires: _base-mixins.scss @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri @copyright 2015 Curators of the University of Missouri @version 1.00 */
+/** Mizzou Framework - Sass: Buttons Requires: _variables.scss @author Josh Nichols (nicholsjc@missouri.edu), University of Missouri @copyright 2016 Curators of the University of Missouri @version 1.50 */
+/** Sets up a button with custom (optional) attributes @param color $color-background  @param color $color-text  @param color $color-border  @param color $color-background-hover @param color $color-text-hover @param color $color-border-hover  */
+/** Sets the button's display to inline-block  */
+/** Sets the button's display to block (this is the default style for custom-button) */
+/** Standard button styles. */
+.button:last-child { margin-bottom: 0.75em; }
+
+.button { font-weight: 700; display: block; text-decoration: none; font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif; cursor: pointer; text-align: center; transition-property: background, border, color; transition-duration: 0.1s; transition-timing-function: linear; border-style: solid; border-width: 1px; background: #F1B82D; color: #000000; border: 1px solid #F1B82D; font-size: 1em; border-radius: 4px; padding: .5em .75em .4em; margin: 0.75em 0 1.5em 0; /* &.button--reversed { background-color: $gold-200; border-color: $gold-200; &:hover, &:focus, &:active { background-color: $gold-400; border-color: $gold-400; } } &.button--alternate { // For gold backgrounds background-color: $grey-600; color: $grey-100; border-color: $grey-600; &:hover, &:focus, &:active { background-color: fade-out($grey-600, .3); color: $grey-100; border-color: $grey-600; } }*/ /* &.button--secondary-reversed { background-color: transparent; color: $grey-100; border-color: $gold; &:hover, &:focus, &:active { background-color: fade-out($gold-200, .8); color: $grey-100; border-color: $gold; } } &.button--secondary-alternate { // For gold backgrounds background-color: transparent; color: $grey-600; border-color: $grey-600; &:hover, &:focus, &:active { background-color: fade-out($gold-200, .6); color: $grey-600; border-color: $grey-600; } } */ }
+
+.button:hover, .button:focus, .button:active { background: #FEE8B6; color: #000000; border-color: #F1B82D; }
+
+.button.button--secondary { background-color: rgba(241, 184, 45, 0.1); }
+
+.button.button--secondary:hover, .button.button--secondary:focus, .button.button--secondary:active { background: rgba(241, 184, 45, 0.4); }
+
+.button.button--apply { color: #FFFFFF !important; border-color: #900000 !important; background-color: #900000 !important; position: relative; margin-top: 55px; min-width: 180px; }
+
+.button.button--apply:hover, .button.button--apply:focus, .button.button--apply:active { background: #470102 !important; color: #F1B82D !important; border-color: #900000 !important; }
+
+.button.button--apply:after { content: ''; display: block; width: 100%; height: 22px; background: transparent url("../images/truman-paws.png") no-repeat center center; background-size: 140px 22px; position: absolute; top: -10px; left: 0px; }
+
+.button.button--apply:before { content: ''; display: block; width: 100%; height: 50px; background: transparent url("../images/truman-face.png") no-repeat center 20px; background-size: 80px 83px; position: absolute; top: -51px; left: 0; transition: background linear .2s; }
+
+.button.button--apply:hover:before, .button.button--apply:focus:before { background-position: center 0px; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .button.button--apply:before { background-image: url("../images/truman-face-2x.png"); }
+  .button.button--apply:after { background-image: url("../images/truman-paws-2x.png"); } }
+
+/** Sets up a button with common attributes @param string $color (Optional) Button color. Can be 'brown', 'gold', or 'grey'. Defaults to 'brown' @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Dark gives the button a lighter border. Defaults to 'light' @param boolean $include-print-style (Optional) Whether to make the button black and white for printing. Defaults to true */
+/*  @mixin button( $color:                     'gold', $theme:                     'light' ) { @if ($theme == 'dark') { @if ($color == 'gold') { @include custom-button( $color-background: $gold-300, $color-text: $text-color, $color-border: $gold-200, $color-background-hover: $gold-200, $color-border-hover: $gold-400 ); } @else if ($color == 'grey') { @include custom-button( $color-background: $grey-200, $color-text: $text-color, $color-border: $grey-100, $color-background-hover: $grey-100, $color-text-hover: $black, $color-border-hover: $white ); } @else if ($color == 'transparent') { @include custom-button( $color-background: none, $color-text: $gold-300, $color-border: $gold-300, $color-background-hover: $grey-400, $color-border-hover: $gold-300 ); } @else { // $color == 'brown' @include custom-button( $color-background: $orange-400, $color-text: $white, $color-border: $orange-600, $color-background-hover: $orange-600, $color-border-hover: $orange-600 ); } } @else { // $theme == 'light' @if ($color == 'gold') { @include custom-button( $color-background: $gold-300, $color-text: $text-color, $color-border: $gold-500, $color-background-hover: $gold-200, $color-border-hover: $gold-500 ); } @else if ($color == 'transparent') { @include custom-button( $color-background: none, $color-text: $text-color, $color-border: $gold-500, $color-background-hover: $gold-200 ); } @else if ($color == 'grey') { @include custom-button( $color-background: $grey-600, $color-text: $white, $color-border: $black, $color-background-hover: $black, $color-text-hover: $gold-400, $color-border-hover: $black ); } @else { // $color == 'brown' @include custom-button( $color-background: $orange-400, $color-text: $white, $color-border: $orange-600, $color-background-hover: $orange-600, $color-border-hover: $orange-600 ); } } }*/
+/** Mizzou Framework - Sass: Mizzou Signatures Requires: _base-mixins.scss @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri @copyright 2015 Curators of the University of Missouri @version 1.2 */
 /* @group MU Signatures */
 /** Sets up a university signature @param string $size - (Optional) Signature size. Can be 'extra-small', 'small', 'medium', or 'large'. Defaults to 'small' @param string $color - (Optional) Text color. Can be black or white. Defaults to black @param boolean $print - (Optional) Whether to set the images up for printing. Defaults to false @param boolean $center - (Optional) Whether to center the signature. Defaults to false */
 /* @end */
@@ -341,6 +368,7 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
   p, h1, h2, h3 { orphans: 3; widows: 3; }
   h1, h2, h3 { page-break-after: avoid; } }
 
+/* // For modifying framework locally. Merge changes to proper repo when done. @import "mizzou-framework/_variables"; @import "mizzou-framework/_fonts"; @import "mizzou-framework/_base-mixins";  @import "mizzou-framework/_base"; @import "mizzou-framework/_base-helpers";   @import "mizzou-framework/_forms";  @import "mizzou-framework/_buttons";  @import "mizzou-framework/_mizzou-signature";  @import "mizzou-framework/_grid"; @import "mizzou-framework/_skip-to-links"; //@import "mizzou-framework/_search-forms"; @import "mizzou-framework/_navigation"; @media print { @import "mizzou-framework/_print"; } */
 /** CSS for Mizzou Framework Style Guide @authors Josh Nichols (nicholsjc@missouri.edu), Josh Hughes (hughesjd@missouri.edu), University of Missouri @copyright 2016 Curators of the University of Missouri */
 /* @group signatures */
 .unit-sig, .mu-sig { padding: 1.5em; margin: 1.5em 0; }
@@ -1136,6 +1164,30 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
 .child-example .child-example__element { background-color: #FBD986; padding: 1em; margin: 1em 0; }
 
 /* @end */
+/* @group Buttons */
+.button-examples { margin-bottom: 1.5em; padding: 1.5em; }
+
+.button-examples > :last-child { margin-bottom: 0 !important; }
+
+.buttons--light { background-color: #F0F0F0; }
+
+.buttons--dark { background-color: #222222; }
+
+.buttons--dark .button--secondary { background-color: #222222; color: #F0F0F0; }
+
+.buttons--dark .button--secondary:hover, .buttons--dark .button--secondary:focus, .buttons--dark .button--secondary:active { background-color: rgba(254, 232, 182, 0.2); color: #F0F0F0; }
+
+.buttons--gold { background-color: #F1B82D; }
+
+.buttons--gold .button { background-color: #222222; color: #F0F0F0; border-color: #222222; }
+
+.buttons--gold .button:hover, .buttons--gold .button:focus, .buttons--gold .button:active { background-color: rgba(34, 34, 34, 0.7); color: #F0F0F0; border-color: #222222; }
+
+.buttons--gold .button--secondary { background-color: transparent; color: #222222; border-color: #222222; }
+
+.buttons--gold .button--secondary:hover, .buttons--gold .button--secondary:focus, .buttons--gold .button--secondary:active { background-color: rgba(254, 232, 182, 0.4); color: #222222; border-color: #222222; }
+
+/* @end */
 /* @end */
 /* @group Font Embeds */
 @font-face { font-family: 'Proxima Nova'; src: url("../fonts/proximanova-thin-webfont.woff2") format("woff2"), url("../fonts/proximanova-thin-webfont.woff") format("woff"), url("../fonts/proximanova-thin-webfont.ttf") format("truetype"); font-weight: 200; font-style: normal; }
@@ -1323,17 +1375,17 @@ footer .legal-text p { margin: .5rem 0; }
 .footer__container { position: relative; margin-left: auto; margin-right: auto; max-width: 1200px; min-width: 320px; padding: 0 1rem; }
 
 /* @group Content */
-.section__topic { margin-bottom: 1.5em; }
+.section__topic { margin: 3em 0; }
 
 .section__topic:before, .section__topic:after { content: ' '; display: table; }
 
 .section__topic:after { clear: both; }
 
-.section__title { color: #900000; font-weight: 300; font-size: 3em; margin: 0; }
+.section__title { color: #900000; font-weight: 300; font-size: 3em; margin-bottom: .5em; }
 
 @media screen and (max-width: 700px) { .section__title { font-size: 2.5em; } }
 
-.section__topic__title { border-bottom: 1px solid #FBD986; margin: 1em 0; }
+.section__topic__title { border-bottom: 1px solid #FBD986; margin: 0 0 1em 0; }
 
 @media screen and (max-width: 700px) { .section__topic__title { font-size: 1.8em; } }
 
@@ -1347,9 +1399,9 @@ footer .legal-text p { margin: .5rem 0; }
 
 @media screen and (min-width: 951px) { .section__column { float: left; width: 33.33333%; padding-left: 0; padding-right: 0.5rem; } }
 
-.button__download { font-weight: 700; display: inline-block; text-decoration: none; font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif; cursor: pointer; text-align: center; transition-property: background, border, color; transition-duration: 0.1s; transition-timing-function: linear; border-style: solid; border-width: 1px; background: #FBD986; color: #222222; border: 1px solid #D79900; /* too heavy outline @if ($color-background == transparent) { border: 2px solid $color-border; } @else { border: 1px solid $color-border; }*/ font-size: 1.25em; padding: .3333em 1em; border-radius: 6px; }
+.button { display: inline-block; margin-right: .5em; margin-bottom: 0.75em; }
 
-.button__download:hover, .button__download:focus, .button__download:active { background: #FEE8B6; color: #222222; border-color: #D79900; }
+@media screen and (max-width: 700px) { .button { display: block; margin-right: 0; margin-bottom: 1.5em; } }
 
 /* @end */
 /* @group Pagination */
@@ -1371,13 +1423,11 @@ footer .legal-text p { margin: .5rem 0; }
 
 /* @end */
 /* @group Source Code and Syntax Highlighting */
-.source-code, .source { background: #f8f8f8; padding: 1.5em; margin: 1.5em 0; }
+.source-code, .source { background: #f8f8f8; padding: 1.5em; margin: 0 0 1.5em 0; }
 
 .source-code--hide { display: none; }
 
-.source-code-button { font-weight: 700; display: inline-block; text-decoration: none; font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif; cursor: pointer; text-align: center; transition-property: background, border, color; transition-duration: 0.1s; transition-timing-function: linear; border-style: solid; border-width: 1px; background: #FBD986; color: #222222; border: 1px solid #D79900; /* too heavy outline @if ($color-background == transparent) { border: 2px solid $color-border; } @else { border: 1px solid $color-border; }*/ font-size: 1em; padding: .3333em 1em; border-radius: 4px; font-weight: 400; padding: 5px 16px 3px; text-transform: uppercase; clear: both; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-
-.source-code-button:hover, .source-code-button:focus, .source-code-button:active { background: #FEE8B6; color: #222222; border-color: #D79900; }
+.source-code-button { clear: both; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; min-width: 200px; }
 
 .source-code-button--hide-source { margin-bottom: 1.5; }
 

@@ -4,8 +4,14 @@ readme stuff ...
 
 ## Gulp Functions
 
-* Update Bower components: `bower update`
-* Copy components to style guide: `gulp copy`
-* Watch files and run server: `gulp watch`
+### New site setup
+
 * Update Node components: `npm update`
+* Update Bower components: `bower update`
+* Install Bower components to `bower.json`: `bower install PACKAGE --save`
+
+### Gulp tasks
+
+* Copy components to project: `gulp copy`
+* Watch files and run server: `gulp watch`
 

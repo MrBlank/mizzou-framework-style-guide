@@ -16,7 +16,7 @@ $query-large:                 'screen and (min-width: 951px)';
 /* @end */ 
 
 /* @group Imports */
-    
+  
 @import "../../bower_components/mizzou-framework/src/scss/_variables";
 @import "../../bower_components/mizzou-framework/src/scss/_fonts";
 @import "../../bower_components/mizzou-framework/src/scss/_base-mixins"; 
@@ -30,10 +30,30 @@ $query-large:                 'screen and (min-width: 951px)';
 @import "../../bower_components/mizzou-framework/src/scss/_search-forms";
 @import "../../bower_components/mizzou-framework/src/scss/_navigation";
 
-@media print 
-{
+@media print {
     @import "../../bower_components/mizzou-framework/src/scss/_print";
 }
+
+/*
+// For modifying framework locally. Merge changes to proper repo when done.
+
+@import "mizzou-framework/_variables";
+@import "mizzou-framework/_fonts";
+@import "mizzou-framework/_base-mixins"; 
+@import "mizzou-framework/_base";
+@import "mizzou-framework/_base-helpers";  
+@import "mizzou-framework/_forms"; 
+@import "mizzou-framework/_buttons"; 
+@import "mizzou-framework/_mizzou-signature"; 
+@import "mizzou-framework/_grid";
+@import "mizzou-framework/_skip-to-links";
+//@import "mizzou-framework/_search-forms";
+@import "mizzou-framework/_navigation";
+
+@media print {
+    @import "mizzou-framework/_print";
+}
+*/
 
 @import "_examples";
 
@@ -87,16 +107,14 @@ body {
     @include center-block();
     padding: 0 1em;
     
-    @media #{$query-small}
-    {
+    @media #{$query-small} {
         @include mu-sig(
             $size:             'extra-small',  
             $color:            'white'
         ); 
     }
     
-    @media print 
-    {
+    @media print {
         @include mu-sig(
             $size:             'small',  
             $color:            'black',
@@ -106,34 +124,28 @@ body {
 }
 
 
-header 
-{
+header {
     background-color: $gold-400;
     padding: 1.5em 0; 
 }
-.header__title 
-{
+.header__title {
     @include center-block();
     padding: 0 1em;
     
-    h1 
-    {
+    h1 {
         font-size: 1.5em;
         margin: 0 0 .5em 0;
         
-        a 
-        {
+        a {
             color: $grey-600;
         }    
         a:hover,
         a:focus,
         a:hover span,
-        a:focus span 
-        {
+        a:focus span {
             color: $red-400;
         }
-        span 
-        {
+        span {
             display: block;
             font-weight: $font-thin;
             font-size: 5rem;
@@ -198,7 +210,7 @@ main {
             .nav__menu-button:after
             {
                 transform: none;
-            }
+            } 
             
             .nav__list
             {
@@ -469,18 +481,16 @@ footer {
 
 /* @group Content */
 
-.section__topic
-{
+.section__topic {
     @include clear-fix();
-    margin-bottom: $base-margin + 0em;
+    margin: ($base-margin * 2em) 0;
 }
 
-.section__title 
-{
+.section__title {
     color: $red-400;
     font-weight: $font-light;
     font-size: 3em;
-    margin: 0;
+    margin-bottom: .5em;
     
     @media #{$query-small} {
         font-size: 2.5em;   
@@ -490,7 +500,7 @@ footer {
 .section__topic__title
 {
     border-bottom: 1px solid $gold-300;
-    margin: 1em 0;
+    margin: 0 0 1em 0;
     
     @media #{$query-small} {
         font-size: 1.8em;   
@@ -547,12 +557,16 @@ footer {
     }
 }
 
-.button__download {
-    @include button(
-        $size: 'large',
-        $color: 'gold'
-    );
+.button {
+    @include button--inline-block();
 }
+@media #{$query-small} {
+    
+    .button {
+        @include button--block();
+    }
+}
+
 
 /* @end */
 
@@ -614,32 +628,23 @@ footer {
 /* @group Source Code and Syntax Highlighting */
 
 .source-code,
-.source
-{
+.source {
     background: lighten($grey-100, 3%);
     padding: $base-margin + 0em;
-    margin: ($base-margin + 0em) 0;
+    margin: 0 0 ($base-margin + 0em) 0;
 }
 
-.source-code--hide
-{
+.source-code--hide {
     display: none;
 }
 
-.source-code-button
-{
-    @include button(
-        $color: 'gold'
-    );
-    font-weight: $font-normal;
-    padding: 5px 16px 3px;
-    text-transform: uppercase;
+.source-code-button {
     clear: both;
     user-select: none;
+    min-width: 200px;
 }
 
-.source-code-button--hide-source
-{
+.source-code-button--hide-source {
     margin-bottom: $base-margin;
 }
 
