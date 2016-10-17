@@ -89,13 +89,13 @@ $float-direction    (Optional) How to float the column (defaults to left)
 .grid--basic 
 {
     @include grid-row();
-    background-color: $grey-500;
+    background-color: $gray-500;
     margin-bottom: 1.5rem;
 
     p 
     {
         margin: 0;
-        background-color: $warm-grey-100;
+        background-color: $warm-gray-100;
         padding: 1rem;
     }
     .grid--article 
@@ -148,13 +148,13 @@ $float-direction    (Optional) How to float the column (defaults to left)
 .grid--split 
 {
     @include grid-row();
-    background-color: $grey-500;
+    background-color: $gray-500;
     margin-bottom: 1.5rem;
 
     p 
     {
         margin: 0;
-        background-color: $warm-grey-100;
+        background-color: $warm-gray-100;
         padding: 1rem;
     }
     .grid__column 
@@ -229,7 +229,7 @@ $float-direction    (Optional) How to float the column (defaults to left)
 }
 .grid--header__layer 
 {
-    background-color: $grey-500;
+    background-color: $gray-500;
 
     .grid--header 
     {
@@ -241,7 +241,7 @@ $float-direction    (Optional) How to float the column (defaults to left)
 }
 .grid--content__layer {
     
-    background-color: $warm-grey-100;
+    background-color: $warm-gray-100;
 
     .grid--article 
     {
@@ -272,7 +272,7 @@ $float-direction    (Optional) How to float the column (defaults to left)
 }
 .grid--footer__layer 
 {
-    background-color: $grey-500;
+    background-color: $gray-500;
     margin-bottom: 2rem;
 
     .grid--footer 

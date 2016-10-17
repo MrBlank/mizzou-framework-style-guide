@@ -12,7 +12,7 @@ error_reporting(E_ALL);
 
 // Page attributes
 $aryAttributes['page'] = array(
-    'title' => 'Mizzou Signatures'
+    'title' => 'Unit Signatures'
 );
 
 // Start output buffering
@@ -49,7 +49,7 @@ ob_start();
 {% set sass %}
 .unit-sig--light
 {
-    background: $grey-100;
+    background: $gray-100;
 
     @include mu-unit-sig(
         $size: 'medium',
@@ -105,7 +105,7 @@ ob_start();
 {% set sass %}
 .unit-sig--dark
 {
-    background: $grey-600;
+    background: $gray-600;
 
     @include mu-unit-sig(
         $size: 'medium',
@@ -224,7 +224,7 @@ ob_start();
 {% set sass %}
 .unit-sig--health
 {
-    background: $grey-100;
+    background: $gray-100;
 
     @include mu-unit-sig(
         $size: 'medium',

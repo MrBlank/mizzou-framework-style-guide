@@ -45,7 +45,7 @@ ob_start();
 {% set sass %}
 .mu-sig--light
 {
-    background: $grey-100;
+    background: $gray-100;
 
     @include mu-sig(
         $size: 'medium'
@@ -88,7 +88,7 @@ ob_start();
 {% set sass %}
 .mu-sig--dark
 {
-    background: $grey-600;
+    background: $gray-600;
 
     @include mu-sig(
         $size: 'medium',

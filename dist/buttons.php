@@ -12,7 +12,7 @@ error_reporting(E_ALL);
 
 // Page attributes
 $aryAttributes['page'] = array(
-    'title' => 'Print Reset'
+    'title' => 'Buttons'
 );
 
 // Start output buffering
@@ -41,7 +41,7 @@ ob_start();
 {{ markup|raw }}
 {% set sass %}
 .buttons--light {
-    background-color: $grey-100;
+    background-color: $gray-100;
 }
 {% endset %}
 <div class="source-code"><pre><h3>Markup</h3><code class="language-markup">{{ markup|e }}</code><h3>SASS CSS</h3><code class="language-sass">{{ sass|e }}</code></pre></div>
@@ -74,17 +74,17 @@ ob_start();
 {{ markup|raw }}
 {% set sass %}
 .buttons--dark {
-    background-color: $grey-600;
+    background-color: $gray-600;
         
     .button--secondary {
-        background-color: $grey-600;
-        color: $grey-100;
+        background-color: $gray-600;
+        color: $gray-100;
     
         &:hover,
         &:focus,
         &:active {
             background-color: fade-out($gold-200, .8);
-            color: $grey-100;
+            color: $gray-100;
         }
     }
 }
@@ -93,29 +93,29 @@ ob_start();
     background-color: $gold-400;
     
     .button {
-        background-color: $grey-600;
-        color: $grey-100;
-        border-color: $grey-600;
+        background-color: $gray-600;
+        color: $gray-100;
+        border-color: $gray-600;
     
         &:hover,
         &:focus,
         &:active {
-            background-color: fade-out($grey-600, .3);
-            color: $grey-100;
-            border-color: $grey-600;
+            background-color: fade-out($gray-600, .3);
+            color: $gray-100;
+            border-color: $gray-600;
         }
     }
     .button--secondary { 
         background-color: transparent;
-        color: $grey-600;
-        border-color: $grey-600;
+        color: $gray-600;
+        border-color: $gray-600;
     
         &:hover,
         &:focus,
         &:active {
             background-color: fade-out($gold-200, .6);
-            color: $grey-600;
-            border-color: $grey-600;
+            color: $gray-600;
+            border-color: $gray-600;
         }
     }
 }

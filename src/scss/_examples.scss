@@ -16,13 +16,13 @@
     
     @media #{$query-small}
     {
-        padding: 1em;
+        padding: 1em; 
     }
 }
     
 .unit-sig--light
 {
-    background: $grey-100;
+    background: $gray-100;
 
     @include mu-unit-sig(
         $size: 'medium',
@@ -65,7 +65,7 @@
 
 .unit-sig--dark
 {
-    background: $grey-600;
+    background: $gray-600;
 
     @include mu-unit-sig(
         $size: 'medium',
@@ -158,7 +158,7 @@
 
 .unit-sig--health
 {
-    background: $grey-100;
+    background: $gray-100;
 
     @include mu-unit-sig(
         $size: 'medium',
@@ -209,7 +209,7 @@
 
 .mu-sig--light
 {
-    background: $grey-100;
+    background: $gray-100;
 
     @include mu-sig(
         $size: 'medium'
@@ -239,7 +239,7 @@
 }
 .mu-sig--dark
 {
-    background: $grey-600;
+    background: $gray-600;
 
     @include mu-sig(
         $size: 'medium',
@@ -359,7 +359,7 @@
 {
     font-family: $font-monospace;
     font-size: 12px;
-    color: $grey-400;
+    color: $gray-400;
     white-space: nowrap;
 }
 
@@ -367,7 +367,7 @@
 {
     font-family: $font-monospace;
     font-size: 11px;
-    color: $grey-400;
+    color: $gray-400;
     white-space: nowrap;
 }
 
@@ -414,40 +414,40 @@
     border-bottom-width: 1px;
 }
 
-.color-swatch--grey-100 .color-swatch__description:before
+.color-swatch--gray-100 .color-swatch__description:before
 {
-    background: $grey-100;
-    border-color: darken($grey-100, 10%);
+    background: $gray-100;
+    border-color: darken($gray-100, 10%);
 }
 
-.color-swatch--grey-200 .color-swatch__description:before
+.color-swatch--gray-200 .color-swatch__description:before
 {
-    background: $grey-200;
-    border-color: darken($grey-200, 10%);
+    background: $gray-200;
+    border-color: darken($gray-200, 10%);
 }
 
-.color-swatch--grey-300 .color-swatch__description:before
+.color-swatch--gray-300 .color-swatch__description:before
 {
-    background: $grey-300;
-    border-color: darken($grey-300, 10%);
+    background: $gray-300;
+    border-color: darken($gray-300, 10%);
 }
 
-.color-swatch--grey-400 .color-swatch__description:before
+.color-swatch--gray-400 .color-swatch__description:before
 {
-    background: $grey-400;
-    border-color: darken($grey-400, 10%);
+    background: $gray-400;
+    border-color: darken($gray-400, 10%);
 }
 
-.color-swatch--grey-500 .color-swatch__description:before
+.color-swatch--gray-500 .color-swatch__description:before
 {
-    background: $grey-500;
-    border-color: darken($grey-500, 10%);
+    background: $gray-500;
+    border-color: darken($gray-500, 10%);
 }
 
-.color-swatch--grey-600 .color-swatch__description:before
+.color-swatch--gray-600 .color-swatch__description:before
 {
-    background: $grey-600;
-    border-color: darken($grey-600, 10%);
+    background: $gray-600;
+    border-color: darken($gray-600, 10%);
     border-bottom-width: 1px;
 }
 
@@ -488,40 +488,40 @@
     border-bottom-width: 1px;
 }
 
-.color-swatch--warm-grey-100 .color-swatch__description:before
+.color-swatch--warm-gray-100 .color-swatch__description:before
 {
-    background: $warm-grey-100;
-    border-color: darken($warm-grey-100, 10%);
+    background: $warm-gray-100;
+    border-color: darken($warm-gray-100, 10%);
 }
 
-.color-swatch--warm-grey-200 .color-swatch__description:before
+.color-swatch--warm-gray-200 .color-swatch__description:before
 {
-    background: $warm-grey-200;
-    border-color: darken($warm-grey-200, 10%);
+    background: $warm-gray-200;
+    border-color: darken($warm-gray-200, 10%);
 }
 
-.color-swatch--warm-grey-300 .color-swatch__description:before
+.color-swatch--warm-gray-300 .color-swatch__description:before
 {
-    background: $warm-grey-300;
-    border-color: darken($warm-grey-300, 10%);
+    background: $warm-gray-300;
+    border-color: darken($warm-gray-300, 10%);
 }
 
-.color-swatch--warm-grey-400 .color-swatch__description:before
+.color-swatch--warm-gray-400 .color-swatch__description:before
 {
-    background: $warm-grey-400;
-    border-color: darken($warm-grey-400, 10%);
+    background: $warm-gray-400;
+    border-color: darken($warm-gray-400, 10%);
 }
 
-.color-swatch--warm-grey-500 .color-swatch__description:before
+.color-swatch--warm-gray-500 .color-swatch__description:before
 {
-    background: $warm-grey-500;
-    border-color: darken($warm-grey-500, 10%);
+    background: $warm-gray-500;
+    border-color: darken($warm-gray-500, 10%);
 }
 
-.color-swatch--warm-grey-600 .color-swatch__description:before
+.color-swatch--warm-gray-600 .color-swatch__description:before
 {
-    background: $warm-grey-600;
-    border-color: darken($warm-grey-600, 10%);
+    background: $warm-gray-600;
+    border-color: darken($warm-gray-600, 10%);
     border-bottom-width: 1px;
 }
 
@@ -724,34 +724,34 @@
     color: #fff;
 }
 
-.accessible-color--grey-100
+.accessible-color--gray-100
 {
-    color: $grey-100;
+    color: $gray-100;
 }
 
-.accessible-color--grey-200
+.accessible-color--gray-200
 {
-    color: $grey-200;
+    color: $gray-200;
 }
 
-.accessible-color--grey-300
+.accessible-color--gray-300
 {
-    color: $grey-300;
+    color: $gray-300;
 }
 
-.accessible-color--grey-400
+.accessible-color--gray-400
 {
-    color: $grey-400;
+    color: $gray-400;
 }
 
-.accessible-color--grey-500
+.accessible-color--gray-500
 {
-    color: $grey-500;
+    color: $gray-500;
 }
 
-.accessible-color--grey-600
+.accessible-color--gray-600
 {
-    color: $grey-600;
+    color: $gray-600;
 }
 
 .accessible-color--black
@@ -789,34 +789,34 @@
     color: $tan-600;
 }
 
-.accessible-color--warm-grey-100
+.accessible-color--warm-gray-100
 {
-    color: $warm-grey-100;
+    color: $warm-gray-100;
 }
 
-.accessible-color--warm-grey-200
+.accessible-color--warm-gray-200
 {
-    color: $warm-grey-200;
+    color: $warm-gray-200;
 }
 
-.accessible-color--warm-grey-300
+.accessible-color--warm-gray-300
 {
-    color: $warm-grey-300;
+    color: $warm-gray-300;
 }
 
-.accessible-color--warm-grey-400
+.accessible-color--warm-gray-400
 {
-    color: $warm-grey-400;
+    color: $warm-gray-400;
 }
 
-.accessible-color--warm-grey-500
+.accessible-color--warm-gray-500
 {
-    color: $warm-grey-500;
+    color: $warm-gray-500;
 }
 
-.accessible-color--warm-grey-600
+.accessible-color--warm-gray-600
 {
-    color: $warm-grey-600;
+    color: $warm-gray-600;
 }
 
 .accessible-color--red-100
@@ -981,40 +981,40 @@
     border-color: darken(#fff, 10%);
 }
 
-.accessible-color-background--grey-100
+.accessible-color-background--gray-100
 {
-    background: $grey-100;
-    border-color: darken($grey-100, 10%);
+    background: $gray-100;
+    border-color: darken($gray-100, 10%);
 }
 
-.accessible-color-background--grey-200
+.accessible-color-background--gray-200
 {
-    background: $grey-200;
-    border-color: darken($grey-200, 10%);
+    background: $gray-200;
+    border-color: darken($gray-200, 10%);
 }
 
-.accessible-color-background--grey-300
+.accessible-color-background--gray-300
 {
-    background: $grey-300;
-    border-color: darken($grey-300, 10%);
+    background: $gray-300;
+    border-color: darken($gray-300, 10%);
 }
 
-.accessible-color-background--grey-400
+.accessible-color-background--gray-400
 {
-    background: $grey-400;
-    border-color: darken($grey-400, 10%);
+    background: $gray-400;
+    border-color: darken($gray-400, 10%);
 }
 
-.accessible-color-background--grey-500
+.accessible-color-background--gray-500
 {
-    background: $grey-500;
-    border-color: darken($grey-500, 10%);
+    background: $gray-500;
+    border-color: darken($gray-500, 10%);
 }
 
-.accessible-color-background--grey-600
+.accessible-color-background--gray-600
 {
-    background: $grey-600;
-    border-color: darken($grey-600, 10%);
+    background: $gray-600;
+    border-color: darken($gray-600, 10%);
 }
 
 .accessible-color-background--black
@@ -1059,40 +1059,40 @@
     border-color: darken($tan-600, 10%);
 }
 
-.accessible-color-background--warm-grey-100
+.accessible-color-background--warm-gray-100
 {
-    background: $warm-grey-100;
-    border-color: darken($warm-grey-100, 10%);
+    background: $warm-gray-100;
+    border-color: darken($warm-gray-100, 10%);
 }
 
-.accessible-color-background--warm-grey-200
+.accessible-color-background--warm-gray-200
 {
-    background: $warm-grey-200;
-    border-color: darken($warm-grey-200, 10%);
+    background: $warm-gray-200;
+    border-color: darken($warm-gray-200, 10%);
 }
 
-.accessible-color-background--warm-grey-300
+.accessible-color-background--warm-gray-300
 {
-    background: $warm-grey-300;
-    border-color: darken($warm-grey-300, 10%);
+    background: $warm-gray-300;
+    border-color: darken($warm-gray-300, 10%);
 }
 
-.accessible-color-background--warm-grey-400
+.accessible-color-background--warm-gray-400
 {
-    background: $warm-grey-400;
-    border-color: darken($warm-grey-400, 10%);
+    background: $warm-gray-400;
+    border-color: darken($warm-gray-400, 10%);
 }
 
-.accessible-color-background--warm-grey-500
+.accessible-color-background--warm-gray-500
 {
-    background: $warm-grey-500;
-    border-color: darken($warm-grey-500, 10%);
+    background: $warm-gray-500;
+    border-color: darken($warm-gray-500, 10%);
 }
 
-.accessible-color-background--warm-grey-600
+.accessible-color-background--warm-gray-600
 {
-    background: $warm-grey-600;
-    border-color: darken($warm-grey-600, 10%);
+    background: $warm-gray-600;
+    border-color: darken($warm-gray-600, 10%);
 }
 
 .accessible-color-background--red-100
@@ -1254,9 +1254,9 @@
         font-family: $font-sans;
         text-transform: uppercase;
         font-size: .9em;
-        color: $grey-400;
+        color: $gray-400;
         padding-bottom: 4px;
-        border-bottom: 1px solid $grey-200;
+        border-bottom: 1px solid $gray-200;
         margin: 0;
     }
     
@@ -1289,13 +1289,13 @@
 .grid--basic 
 {
     @include grid-row();
-    background-color: $grey-500;
+    background-color: $gray-500;
     margin-bottom: 1.5rem;
 
     p 
     {
         margin: 0;
-        background-color: $warm-grey-100;
+        background-color: $warm-gray-100;
         padding: 1rem;
     }
     .grid--article 
@@ -1329,13 +1329,13 @@
 .grid--split 
 {
     @include grid-row();
-    background-color: $grey-500;
+    background-color: $gray-500;
     margin-bottom: 1.5rem;
 
     p 
     {
         margin: 0;
-        background-color: $warm-grey-100;
+        background-color: $warm-gray-100;
         padding: 1rem;
     }
     .grid__column 
@@ -1376,7 +1376,7 @@
 }
 .grid--header__layer 
 {
-    background-color: $grey-500;
+    background-color: $gray-500;
 
     .grid--header 
     {
@@ -1388,7 +1388,7 @@
 }
 .grid--content__layer {
     
-    background-color: $warm-grey-100;
+    background-color: $warm-gray-100;
 
     .grid--article 
     {
@@ -1419,7 +1419,7 @@
 }
 .grid--footer__layer 
 {
-    background-color: $grey-500;
+    background-color: $gray-500;
     margin-bottom: 2rem;
 
     .grid--footer 
@@ -1526,21 +1526,21 @@
 }
    
 .buttons--light {
-    background-color: $grey-100;
+    background-color: $gray-100;
 }
 
 .buttons--dark {
-    background-color: $grey-600;
+    background-color: $gray-600;
         
     .button--secondary {
-        background-color: $grey-600;
-        color: $grey-100;
+        background-color: $gray-600;
+        color: $gray-100;
     
         &:hover,
         &:focus,
         &:active {
             background-color: fade-out($gold-200, .8);
-            color: $grey-100;
+            color: $gray-100;
         }
     }
 }
@@ -1549,29 +1549,29 @@
     background-color: $gold-400;
     
     .button {
-        background-color: $grey-600;
-        color: $grey-100;
-        border-color: $grey-600;
+        background-color: $gray-600;
+        color: $gray-100;
+        border-color: $gray-600;
     
         &:hover,
         &:focus,
         &:active {
-            background-color: fade-out($grey-600, .3);
-            color: $grey-100;
-            border-color: $grey-600;
+            background-color: fade-out($gray-600, .3);
+            color: $gray-100;
+            border-color: $gray-600;
         }
     }
     .button--secondary { 
         background-color: transparent;
-        color: $grey-600;
-        border-color: $grey-600;
+        color: $gray-600;
+        border-color: $gray-600;
     
         &:hover,
         &:focus,
         &:active {
             background-color: fade-out($gold-200, .6);
-            color: $grey-600;
-            border-color: $grey-600;
+            color: $gray-600;
+            border-color: $gray-600;
         }
     }
 }

@@ -3,7 +3,7 @@
 /* @group Variable Overrides */
 /* @end */
 /* @group Imports */
-/** Mizzou Framework - Sass: Variables @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri @copyright 2015 Curators of the University of Missouri @version 1.00 */
+/** Mizzou Framework - Sass: Variables @author Josh Nichols (nicholsjc@missouri.edu), University of Missouri @copyright 2016 Curators of the University of Missouri @version 1.10 */
 /* @group Colors */
 /* @end */
 /* @group Fonts */
@@ -61,15 +61,15 @@ u { text-decoration: none; }
 
 /* @end */
 /* @group Headings and Paragraphs */
-h1, h2, h3, h4, h5, h6, .like-h1, .like-h2, .like-h3, .like-h4, caption, .like-h5, .like-h6 { margin: 0 0 1.5em 0; font-weight: 600; color: #000; }
+h1, h2, h3, h4, h5, h6, .like-h1, .like-h2, legend, .like-h3, .like-h4, caption, .like-h5, .like-h6 { margin: 0 0 1.5rem 0; font-weight: 600; color: #000; }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .like-h1 a, .like-h2 a, .like-h3 a, .like-h4 a, caption a, .like-h5 a, .like-h6 a { text-decoration: none; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .like-h1 a, .like-h2 a, legend a, .like-h3 a, .like-h4 a, caption a, .like-h5 a, .like-h6 a { text-decoration: none; }
 
-h1, .like-h1 { margin: 0 0 1.125em 0; font-size: 2.5em; line-height: 1.2; }
+h1, .like-h1 { margin: 0 0 1.5rem 0; font-size: 2.5em; line-height: 1.2; }
 
-h2, .like-h2 { margin: 0 0 1.125em 0; font-size: 2em; line-height: 1.2; }
+h2, .like-h2, legend { margin: 0 0 1.5rem 0; font-size: 1.8em; line-height: 1.2; }
 
-h3, .like-h3 { font-size: 1.5em; line-height: 1.3; }
+h3, .like-h3 { font-size: 1.4em; line-height: 1.3; }
 
 h4, .like-h4, caption { font-size: 1em; }
 
@@ -77,13 +77,13 @@ h5, h6, .like-h5, .like-h6 { color: #666666; font-size: 1em; margin: .5em 0; }
 
 h6, .like-h6 { color: #999999; font-style: italic; }
 
-p { margin: 0 0 1.5em 0; }
+p { margin: 0 0 1.5rem 0; }
 
 /* @end */
 /* @group Images, Figures, and Video */
 img { border: 0; max-width: 100%; width: auto; height: auto; }
 
-figure, .alignnone, .alignleft, .aligncenter, .alignright { margin: 0 0 1.5em 0; max-width: 100%; }
+figure, .alignnone, .alignleft, .aligncenter, .alignright { margin: 0 0 1.5rem 0; max-width: 100%; }
 
 figure.center, .aligncenter { margin: 0 auto 1em auto; text-align: center; }
 
@@ -95,7 +95,7 @@ figcaption p { font-size: inherit; }
 
 iframe { border: 0; clear: both; }
 
-.video { margin: 0 0 1.5em 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.video { margin: 0 0 1.5rem 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
 
 .video.video--4x3 { padding-bottom: 75%; }
 
@@ -117,25 +117,25 @@ address { font-style: normal; }
 
 /* @end */
 /* @group Horizontal Rules */
-hr { margin: 0 0 1.5em 0; clear: both; border: 0; border-bottom: 1px solid #CCCCCC; }
+hr { margin: 0 0 1.5rem 0; clear: both; border: 0; border-bottom: 1px solid #CCCCCC; }
 
 /* @end */
 /* @group Lists */
-ul, ol { margin: 0 0 1.5em 0; padding-left: 2.25em; }
+ul, ol { margin: 0 0 1.5rem 0; padding-left: 2.25rem; }
 
 ul ul, ul ol, ol ul, ol ol { margin: 0; }
 
 li li, li p { font-size: inherit; }
 
-dl { margin: 0 0 1.5em 0; padding-left: 2.25em; }
+dl { margin: 0 0 1.5rem 0; padding-left: 2.25rem; }
 
 dt { font-weight: 600; }
 
-dd { margin: 0 0 0.75em 0; }
+dd { margin: 0 0 0.75rem 0; }
 
 /* @end */
 /* @group Forms */
-form, fieldset { margin: 0 0 1.5em 0; }
+form, fieldset { margin: 0 0 1.5rem 0; }
 
 fieldset, legend { padding: 0; border: 0; }
 
@@ -147,7 +147,7 @@ input[type='submit']::-moz-focus-inner, input[type='reset']::-moz-focus-inner, i
 
 /* @end */
 /* @group Tables */
-table { margin: 0 0 1.5em 0; border-collapse: collapse; border-spacing: 0; }
+table { margin: 0 0 1.5rem 0; border-collapse: collapse; border-spacing: 0; }
 
 th, td { border: 1px solid #999999; text-align: left; }
 
@@ -232,7 +232,7 @@ hr.rule--space { border-color: transparent; visibility: hidden; }
 
 .caps { font-size: 90%; text-transform: uppercase; }
 
-.dropcap { font-weight: 700; float: left; display: block; line-height: .7; font-size: 5.4em; margin: 0 .08em 0 -.04em; padding-top: .11em; }
+.dropcap { font-weight: 600; float: left; display: block; line-height: .7; font-size: 5.4em; margin: 0 .08em 0 -.04em; padding-top: .11em; }
 
 .dropcap.hang { margin-left: -.3em; }
 
@@ -335,7 +335,7 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
 
 /** Sets up a button with common attributes @param string $color (Optional) Button color. Can be 'brown', 'gold', or 'grey'. Defaults to 'brown' @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Dark gives the button a lighter border. Defaults to 'light' @param boolean $include-print-style (Optional) Whether to make the button black and white for printing. Defaults to true */
 /*  @mixin button( $color:                     'gold', $theme:                     'light' ) { @if ($theme == 'dark') { @if ($color == 'gold') { @include custom-button( $color-background: $gold-300, $color-text: $text-color, $color-border: $gold-200, $color-background-hover: $gold-200, $color-border-hover: $gold-400 ); } @else if ($color == 'grey') { @include custom-button( $color-background: $grey-200, $color-text: $text-color, $color-border: $grey-100, $color-background-hover: $grey-100, $color-text-hover: $black, $color-border-hover: $white ); } @else if ($color == 'transparent') { @include custom-button( $color-background: none, $color-text: $gold-300, $color-border: $gold-300, $color-background-hover: $grey-400, $color-border-hover: $gold-300 ); } @else { // $color == 'brown' @include custom-button( $color-background: $orange-400, $color-text: $white, $color-border: $orange-600, $color-background-hover: $orange-600, $color-border-hover: $orange-600 ); } } @else { // $theme == 'light' @if ($color == 'gold') { @include custom-button( $color-background: $gold-300, $color-text: $text-color, $color-border: $gold-500, $color-background-hover: $gold-200, $color-border-hover: $gold-500 ); } @else if ($color == 'transparent') { @include custom-button( $color-background: none, $color-text: $text-color, $color-border: $gold-500, $color-background-hover: $gold-200 ); } @else if ($color == 'grey') { @include custom-button( $color-background: $grey-600, $color-text: $white, $color-border: $black, $color-background-hover: $black, $color-text-hover: $gold-400, $color-border-hover: $black ); } @else { // $color == 'brown' @include custom-button( $color-background: $orange-400, $color-text: $white, $color-border: $orange-600, $color-background-hover: $orange-600, $color-border-hover: $orange-600 ); } } }*/
-/** Mizzou Framework - Sass: Mizzou Signatures Requires: _base-mixins.scss @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri @copyright 2015 Curators of the University of Missouri @version 1.2 */
+/** Mizzou Framework - Sass: Mizzou Signatures Requires: _base-mixins.scss @author Josh Nichols (nicholsjc@missouri.edu), University of Missouri @copyright 2016 Curators of the University of Missouri @version 1.3 */
 /* @group MU Signatures */
 /** Sets up a university signature @param string $size - (Optional) Signature size. Can be 'extra-small', 'small', 'medium', or 'large'. Defaults to 'small' @param string $color - (Optional) Text color. Can be black or white. Defaults to black @param boolean $print - (Optional) Whether to set the images up for printing. Defaults to false @param boolean $center - (Optional) Whether to center the signature. Defaults to false */
 /* @end */
@@ -351,12 +351,12 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
 /** Mizzou Framework - Sass: Skip to Links Requires: _variables.scss @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri @copyright 2015 Curators of the University of Missouri @version 1.00 */
 /** Sets up "Skip to Content" link at the top of the document that's visible on tab @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Defaults to 'light' @param boolean $include-print-style (Optional) Whether to hide the element for printing. Defaults to true */
 /** Sass CSS Framework: Search Form Requires: _variables.scss, mizzou-base.scss, _buttons.scss $author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri $copyright 2015 Curators of the University of Missouri $version 3.00 */
-/** Styles for a search form @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Defaults to 'light' @param string $button-color (Optional) Button color. Can be 'orange', 'gold', or 'grey'. Defaults to 'gold' (see .ui-button) @param boolean $include-print-style (Optional) Whether to hide the form for printing. Defaults to true */
+/** Styles for a search form @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Defaults to 'light' @param string $button-color (Optional) Button color. Can be 'orange', 'gold', or 'gray'. Defaults to 'gold' (see .ui-button) @param boolean $include-print-style (Optional) Whether to hide the form for printing. Defaults to true */
 /** Mizzou Framework: Navigation Requires: _variables.scss @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri @copyright 2016 Curators of the University of Missouri @version 3.0.0 */
 /** Sets up a vertical navigation with custom attributes. @param color $color-background Background color. @param color $color-border Border color. @param color $color-link Link color. @param color $color-link-hover Link color on hover and focus. @param color $color-link-background-hover Link background color on hover and focus. @param color $color-background (Optional) Background color highlight (primarily used for mobile menu). @param color $color-current-page (Optional) Current page color. Defaults to $color-link-hover. @param color $color-current-page-background (Optional) Current page background color. Defaults to $color-link-background-hover. @param color $color-sub-menu-background (Optional) Sub-menu background color. Defaults to $color-background. @param color $color-sub-menu-border (Optional) Sub-menu border color. Defaults to $color-border. @param color $color-sub-menu-link (Optional) Sub-menu link color. Defaults to $color-link. @param color $color-sub-menu-link-hover (Optional) Sub-menu link color on hover and focus. Defaults to $color-link-hover. @param color $color-sub-menu-link-background-hover (Optional) Sub-menu link background color on hover and focus. Defaults to $color-link-background-hover. @param color $color-sub-menu-current-page (Optional) Sub-menu current page color. Defaults to $color-sub-menu-link-hover. @param color $color-sub-menu-current-page-background (Optional) Sub-menu current page background color. Defaults to $color-sub-menu-link-background-hover. @param boolean $include-mobile-menu (Optional) Whether to include mobile menu styles. Defaults to false. @param media query $query-disable-mobile-menu (Optional) Media query at which to disable the mobile menu. Defaults to false. */
-/** Sets up vertical navigation. @param string $color (Optional) Navigation color. Can be 'gold', 'tan', or 'grey'. Defaults to 'gold'. @param boolean $include-mobile-menu (Optional) Whether to include mobile menu styles. Defaults to false. @param media query $query-disable-mobile-menu (Optional) Media query at which to disable the mobile menu. Defaults to false. */
+/** Sets up vertical navigation. @param string $color (Optional) Navigation color. Can be 'gold', 'tan', or 'gray'. Defaults to 'gold'. @param boolean $include-mobile-menu (Optional) Whether to include mobile menu styles. Defaults to false. @param media query $query-disable-mobile-menu (Optional) Media query at which to disable the mobile menu. Defaults to false. */
 /** Sets up a horizontal navigation with custom attributes. @param color $color-border Border color. @param color $color-link Link color. @param color $color-link-hover Link color on hover and focus. @param color $color-background-highlight Background gradient top color. @param color $color-background Background gradient bottom color. @param color $color-link-background-hover-highlight Link background gradient on hover and focus top color. @param color $color-link-background-hover Link background gradient on hover and focus bottom color. @param color $color-current-page (Optional) Current page color. Defaults to $color-link-hover. @param color $color-current-page-background-highlight (Optional) Current page background gradient top color. Defaults to $color-link-background-hover-highlight. @param color $color-current-page-background (Optional) Current page background gradient bottom color. Defaults to $color-link-background-hover. */
-/** Sets up horizontal navigation. @param string $color (Optional) Navigation color. Can be 'gold', 'tan', or 'grey'. Defaults to 'gold'. */
+/** Sets up horizontal navigation. @param string $color (Optional) Navigation color. Can be 'gold', 'tan', or 'gray'. Defaults to 'gold'. */
 @media print { /** Mizzou Framework - Sass: Print Reset @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri @copyright 2015 Curators of the University of Missouri @version 1.00 */
   *, *:before, *:after { background-image: none !important; background-color: #fff !important; color: #000 !important; border-color: #000 !important; }
   html { font-size: 11pt !important; }
@@ -389,11 +389,11 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
 
 .unit-sig--light .unit-sig__wordmark, .unit-sig--light .unit-sig__unit { margin-left: 65px; }
 
-.unit-sig--light .unit-sig__wordmark a { height: 20px; width: 183px; background-image: url("../images/unit-wordmark-black-medium.svg"); margin-left: 2px; }
+.unit-sig--light .unit-sig__wordmark a { height: 20px; width: 183px; background-image: url("../images/unit-wordmark-medium.svg"); margin-left: 2px; }
 
 .unit-sig--light .unit-sig__wordmark a:hover, .unit-sig--light .unit-sig__wordmark a:focus, .unit-sig--light .unit-sig__wordmark a:active { background-position: left -20px; }
 
-.unit-sig--light .unit-sig__unit a { width: 284px; height: 40px; margin-bottom: 0; background-image: url("../images/unit-name-black-medium.svg"); }
+.unit-sig--light .unit-sig__unit a { width: 284px; height: 40px; margin-bottom: 0; background-image: url("../images/unit-name-medium.svg"); }
 
 .unit-sig--light .unit-sig__unit a:hover, .unit-sig--light .unit-sig__unit a:focus, .unit-sig--light .unit-sig__unit a:active { background-position: left -40px; }
 
@@ -403,9 +403,9 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
   .unit-sig--light .unit-sig__logo a, .unit-sig--light .unit-sig__wordmark a, .unit-sig--light .unit-sig__unit a { display: block; text-indent: 200%; white-space: nowrap; overflow: hidden; padding: 0; background-repeat: no-repeat; background-position: left 0; margin: 0; }
   .unit-sig--light .unit-sig__logo a { width: 34px; height: 38px; background-image: url("../images/mu-logo-small.svg"); float: left; margin-left: -1px; }
   .unit-sig--light .unit-sig__wordmark, .unit-sig--light .unit-sig__unit { margin-left: 44px; }
-  .unit-sig--light .unit-sig__wordmark a { height: 17px; width: 149px; background-image: url("../images/unit-wordmark-black-small.svg"); margin-left: 1px; }
+  .unit-sig--light .unit-sig__wordmark a { height: 17px; width: 149px; background-image: url("../images/unit-wordmark-small.svg"); margin-left: 1px; }
   .unit-sig--light .unit-sig__wordmark a:hover, .unit-sig--light .unit-sig__wordmark a:focus, .unit-sig--light .unit-sig__wordmark a:active { background-position: left -17px; }
-  .unit-sig--light .unit-sig__unit a { width: 194px; height: 27px; margin-bottom: 0; background-image: url("../images/unit-name-black-small.svg"); }
+  .unit-sig--light .unit-sig__unit a { width: 194px; height: 27px; margin-bottom: 0; background-image: url("../images/unit-name-small.svg"); }
   .unit-sig--light .unit-sig__unit a:hover, .unit-sig--light .unit-sig__unit a:focus, .unit-sig--light .unit-sig__unit a:active { background-position: left -27px; } }
 
 @media screen and (min-width: 951px) { .unit-sig--light:before, .unit-sig--light:after { content: ' '; display: table; }
@@ -414,9 +414,9 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
   .unit-sig--light .unit-sig__logo a, .unit-sig--light .unit-sig__wordmark a, .unit-sig--light .unit-sig__unit a { display: block; text-indent: 200%; white-space: nowrap; overflow: hidden; padding: 0; background-repeat: no-repeat; background-position: left 0; margin: 0; }
   .unit-sig--light .unit-sig__logo a { width: 66px; height: 74px; background-image: url("../images/mu-logo-large.svg"); float: left; margin-left: -1px; }
   .unit-sig--light .unit-sig__wordmark, .unit-sig--light .unit-sig__unit { margin-left: 86px; }
-  .unit-sig--light .unit-sig__wordmark a { height: 26px; width: 243px; background-image: url("../images/unit-wordmark-black-large.svg"); margin-left: 2px; }
+  .unit-sig--light .unit-sig__wordmark a { height: 26px; width: 243px; background-image: url("../images/unit-wordmark-large.svg"); margin-left: 2px; }
   .unit-sig--light .unit-sig__wordmark a:hover, .unit-sig--light .unit-sig__wordmark a:focus, .unit-sig--light .unit-sig__wordmark a:active { background-position: left -26px; }
-  .unit-sig--light .unit-sig__unit a { width: 404px; height: 57px; margin-bottom: 0; background-image: url("../images/unit-name-black-large.svg"); }
+  .unit-sig--light .unit-sig__unit a { width: 404px; height: 57px; margin-bottom: 0; background-image: url("../images/unit-name-large.svg"); }
   .unit-sig--light .unit-sig__unit a:hover, .unit-sig--light .unit-sig__unit a:focus, .unit-sig--light .unit-sig__unit a:active { background-position: left -57px; } }
 
 @media print { .unit-sig--light:before, .unit-sig--light:after { content: ' '; display: table; }
@@ -427,9 +427,9 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
   .unit-sig--light .unit-sig__logo a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/mu-logo-large.svg"); }
   .unit-sig--light .unit-sig__wordmark, .unit-sig--light .unit-sig__unit { margin-left: 86px; }
   .unit-sig--light .unit-sig__wordmark a { height: 26px; width: 243px; position: relative; background: none; margin-left: 2px; }
-  .unit-sig--light .unit-sig__wordmark a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/unit-wordmark-black-large.svg"); }
+  .unit-sig--light .unit-sig__wordmark a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/unit-wordmark-large.svg"); }
   .unit-sig--light .unit-sig__unit a { width: 404px; height: 57px; margin-bottom: 0; position: relative; background: none; }
-  .unit-sig--light .unit-sig__unit a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/unit-name-black-large.svg"); } }
+  .unit-sig--light .unit-sig__unit a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/unit-name-large.svg"); } }
 
 .unit-sig--dark { background: #222222; }
 
@@ -445,13 +445,13 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
 
 .unit-sig--dark .unit-sig__wordmark, .unit-sig--dark .unit-sig__unit { margin-left: 65px; }
 
-.unit-sig--dark .unit-sig__wordmark a { height: 20px; width: 183px; background-image: url("../images/unit-wordmark-white-medium.svg"); margin-left: 2px; }
+.unit-sig--dark .unit-sig__wordmark a { height: 20px; width: 183px; background-image: url("../images/unit-wordmark-medium.svg"); background-position: left -40px; margin-left: 2px; }
 
-.unit-sig--dark .unit-sig__wordmark a:hover, .unit-sig--dark .unit-sig__wordmark a:focus, .unit-sig--dark .unit-sig__wordmark a:active { background-position: left -20px; }
+.unit-sig--dark .unit-sig__wordmark a:hover, .unit-sig--dark .unit-sig__wordmark a:focus, .unit-sig--dark .unit-sig__wordmark a:active { background-position: left -60px; }
 
-.unit-sig--dark .unit-sig__unit a { width: 284px; height: 40px; margin-bottom: 0; background-image: url("../images/unit-name-white-medium.svg"); }
+.unit-sig--dark .unit-sig__unit a { width: 284px; height: 40px; margin-bottom: 0; background-image: url("../images/unit-name-medium.svg"); background-position: left -80px; }
 
-.unit-sig--dark .unit-sig__unit a:hover, .unit-sig--dark .unit-sig__unit a:focus, .unit-sig--dark .unit-sig__unit a:active { background-position: left -40px; }
+.unit-sig--dark .unit-sig__unit a:hover, .unit-sig--dark .unit-sig__unit a:focus, .unit-sig--dark .unit-sig__unit a:active { background-position: left -120px; }
 
 @media screen and (max-width: 700px) { .unit-sig--dark:before, .unit-sig--dark:after { content: ' '; display: table; }
   .unit-sig--dark:after { clear: both; }
@@ -459,10 +459,10 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
   .unit-sig--dark .unit-sig__logo a, .unit-sig--dark .unit-sig__wordmark a, .unit-sig--dark .unit-sig__unit a { display: block; text-indent: 200%; white-space: nowrap; overflow: hidden; padding: 0; background-repeat: no-repeat; background-position: left 0; margin: 0; }
   .unit-sig--dark .unit-sig__logo a { width: 34px; height: 38px; background-image: url("../images/mu-logo-small.svg"); float: left; margin-left: -1px; }
   .unit-sig--dark .unit-sig__wordmark, .unit-sig--dark .unit-sig__unit { margin-left: 44px; }
-  .unit-sig--dark .unit-sig__wordmark a { height: 17px; width: 149px; background-image: url("../images/unit-wordmark-white-small.svg"); margin-left: 1px; }
-  .unit-sig--dark .unit-sig__wordmark a:hover, .unit-sig--dark .unit-sig__wordmark a:focus, .unit-sig--dark .unit-sig__wordmark a:active { background-position: left -17px; }
-  .unit-sig--dark .unit-sig__unit a { width: 194px; height: 27px; margin-bottom: 0; background-image: url("../images/unit-name-white-small.svg"); }
-  .unit-sig--dark .unit-sig__unit a:hover, .unit-sig--dark .unit-sig__unit a:focus, .unit-sig--dark .unit-sig__unit a:active { background-position: left -27px; } }
+  .unit-sig--dark .unit-sig__wordmark a { height: 17px; width: 149px; background-image: url("../images/unit-wordmark-small.svg"); background-position: left -34px; margin-left: 1px; }
+  .unit-sig--dark .unit-sig__wordmark a:hover, .unit-sig--dark .unit-sig__wordmark a:focus, .unit-sig--dark .unit-sig__wordmark a:active { background-position: left -51px; }
+  .unit-sig--dark .unit-sig__unit a { width: 194px; height: 27px; margin-bottom: 0; background-image: url("../images/unit-name-small.svg"); background-position: left -54px; }
+  .unit-sig--dark .unit-sig__unit a:hover, .unit-sig--dark .unit-sig__unit a:focus, .unit-sig--dark .unit-sig__unit a:active { background-position: left -81px; } }
 
 @media screen and (min-width: 951px) { .unit-sig--dark:before, .unit-sig--dark:after { content: ' '; display: table; }
   .unit-sig--dark:after { clear: both; }
@@ -470,10 +470,10 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
   .unit-sig--dark .unit-sig__logo a, .unit-sig--dark .unit-sig__wordmark a, .unit-sig--dark .unit-sig__unit a { display: block; text-indent: 200%; white-space: nowrap; overflow: hidden; padding: 0; background-repeat: no-repeat; background-position: left 0; margin: 0; }
   .unit-sig--dark .unit-sig__logo a { width: 66px; height: 74px; background-image: url("../images/mu-logo-large.svg"); float: left; margin-left: -1px; }
   .unit-sig--dark .unit-sig__wordmark, .unit-sig--dark .unit-sig__unit { margin-left: 86px; }
-  .unit-sig--dark .unit-sig__wordmark a { height: 26px; width: 243px; background-image: url("../images/unit-wordmark-white-large.svg"); margin-left: 2px; }
-  .unit-sig--dark .unit-sig__wordmark a:hover, .unit-sig--dark .unit-sig__wordmark a:focus, .unit-sig--dark .unit-sig__wordmark a:active { background-position: left -26px; }
-  .unit-sig--dark .unit-sig__unit a { width: 404px; height: 57px; margin-bottom: 0; background-image: url("../images/unit-name-white-large.svg"); }
-  .unit-sig--dark .unit-sig__unit a:hover, .unit-sig--dark .unit-sig__unit a:focus, .unit-sig--dark .unit-sig__unit a:active { background-position: left -57px; } }
+  .unit-sig--dark .unit-sig__wordmark a { height: 26px; width: 243px; background-image: url("../images/unit-wordmark-large.svg"); background-position: left -52px; margin-left: 2px; }
+  .unit-sig--dark .unit-sig__wordmark a:hover, .unit-sig--dark .unit-sig__wordmark a:focus, .unit-sig--dark .unit-sig__wordmark a:active { background-position: left -78px; }
+  .unit-sig--dark .unit-sig__unit a { width: 404px; height: 57px; margin-bottom: 0; background-image: url("../images/unit-name-large.svg"); background-position: left -114px; }
+  .unit-sig--dark .unit-sig__unit a:hover, .unit-sig--dark .unit-sig__unit a:focus, .unit-sig--dark .unit-sig__unit a:active { background-position: left -171px; } }
 
 @media print { .unit-sig--dark:before, .unit-sig--dark:after { content: ' '; display: table; }
   .unit-sig--dark:after { clear: both; }
@@ -483,9 +483,9 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
   .unit-sig--dark .unit-sig__logo a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/mu-logo-large.svg"); }
   .unit-sig--dark .unit-sig__wordmark, .unit-sig--dark .unit-sig__unit { margin-left: 86px; }
   .unit-sig--dark .unit-sig__wordmark a { height: 26px; width: 243px; position: relative; background: none; margin-left: 2px; }
-  .unit-sig--dark .unit-sig__wordmark a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/unit-wordmark-black-large.svg"); }
+  .unit-sig--dark .unit-sig__wordmark a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/unit-wordmark-large.svg"); }
   .unit-sig--dark .unit-sig__unit a { width: 404px; height: 57px; margin-bottom: 0; position: relative; background: none; }
-  .unit-sig--dark .unit-sig__unit a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/unit-name-black-large.svg"); } }
+  .unit-sig--dark .unit-sig__unit a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/unit-name-large.svg"); } }
 
 .unit-sig--center { background: #F1B82D; }
 
@@ -495,28 +495,28 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
 
 .unit-sig--center .unit-sig__logo a { width: 50px; height: 56px; background-image: url("../images/mu-logo-medium.svg"); margin-bottom: 15px; }
 
-.unit-sig--center .unit-sig__wordmark a { height: 20px; width: 183px; background-image: url("../images/unit-wordmark-black-medium.svg"); }
+.unit-sig--center .unit-sig__wordmark a { height: 20px; width: 183px; background-image: url("../images/unit-wordmark-medium.svg"); }
 
 .unit-sig--center .unit-sig__wordmark a:hover, .unit-sig--center .unit-sig__wordmark a:focus, .unit-sig--center .unit-sig__wordmark a:active { background-position: left -20px; }
 
-.unit-sig--center .unit-sig__unit a { width: 284px; height: 40px; margin-bottom: 0; background-image: url("../images/unit-name-black-medium.svg"); }
+.unit-sig--center .unit-sig__unit a { width: 284px; height: 40px; margin-bottom: 0; background-image: url("../images/unit-name-medium.svg"); }
 
 .unit-sig--center .unit-sig__unit a:hover, .unit-sig--center .unit-sig__unit a:focus, .unit-sig--center .unit-sig__unit a:active { background-position: left -40px; }
 
 @media screen and (max-width: 700px) { .unit-sig--center .unit-sig__logo, .unit-sig--center .unit-sig__wordmark, .unit-sig--center .unit-sig__unit { margin: 0; }
   .unit-sig--center .unit-sig__logo a, .unit-sig--center .unit-sig__wordmark a, .unit-sig--center .unit-sig__unit a { display: block; text-indent: 200%; white-space: nowrap; overflow: hidden; padding: 0; background-repeat: no-repeat; background-position: left 0; margin-left: auto; margin-right: auto; }
   .unit-sig--center .unit-sig__logo a { width: 34px; height: 38px; background-image: url("../images/mu-logo-small.svg"); margin-bottom: 10px; }
-  .unit-sig--center .unit-sig__wordmark a { height: 17px; width: 149px; background-image: url("../images/unit-wordmark-black-small.svg"); }
+  .unit-sig--center .unit-sig__wordmark a { height: 17px; width: 149px; background-image: url("../images/unit-wordmark-small.svg"); }
   .unit-sig--center .unit-sig__wordmark a:hover, .unit-sig--center .unit-sig__wordmark a:focus, .unit-sig--center .unit-sig__wordmark a:active { background-position: left -17px; }
-  .unit-sig--center .unit-sig__unit a { width: 194px; height: 27px; margin-bottom: 0; background-image: url("../images/unit-name-black-small.svg"); }
+  .unit-sig--center .unit-sig__unit a { width: 194px; height: 27px; margin-bottom: 0; background-image: url("../images/unit-name-small.svg"); }
   .unit-sig--center .unit-sig__unit a:hover, .unit-sig--center .unit-sig__unit a:focus, .unit-sig--center .unit-sig__unit a:active { background-position: left -27px; } }
 
 @media screen and (min-width: 951px) { .unit-sig--center .unit-sig__logo, .unit-sig--center .unit-sig__wordmark, .unit-sig--center .unit-sig__unit { margin: 0; }
   .unit-sig--center .unit-sig__logo a, .unit-sig--center .unit-sig__wordmark a, .unit-sig--center .unit-sig__unit a { display: block; text-indent: 200%; white-space: nowrap; overflow: hidden; padding: 0; background-repeat: no-repeat; background-position: left 0; margin-left: auto; margin-right: auto; }
   .unit-sig--center .unit-sig__logo a { width: 66px; height: 74px; background-image: url("../images/mu-logo-large.svg"); margin-bottom: 20px; }
-  .unit-sig--center .unit-sig__wordmark a { height: 26px; width: 243px; background-image: url("../images/unit-wordmark-black-large.svg"); }
+  .unit-sig--center .unit-sig__wordmark a { height: 26px; width: 243px; background-image: url("../images/unit-wordmark-large.svg"); }
   .unit-sig--center .unit-sig__wordmark a:hover, .unit-sig--center .unit-sig__wordmark a:focus, .unit-sig--center .unit-sig__wordmark a:active { background-position: left -26px; }
-  .unit-sig--center .unit-sig__unit a { width: 404px; height: 57px; margin-bottom: 0; background-image: url("../images/unit-name-black-large.svg"); }
+  .unit-sig--center .unit-sig__unit a { width: 404px; height: 57px; margin-bottom: 0; background-image: url("../images/unit-name-large.svg"); }
   .unit-sig--center .unit-sig__unit a:hover, .unit-sig--center .unit-sig__unit a:focus, .unit-sig--center .unit-sig__unit a:active { background-position: left -57px; } }
 
 @media print { .unit-sig--center .unit-sig__logo, .unit-sig--center .unit-sig__wordmark, .unit-sig--center .unit-sig__unit { margin: 0; }
@@ -524,9 +524,9 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
   .unit-sig--center .unit-sig__logo a { width: 66px; height: 74px; position: relative; background: none; margin-bottom: 20px; }
   .unit-sig--center .unit-sig__logo a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/mu-logo-large.svg"); }
   .unit-sig--center .unit-sig__wordmark a { height: 26px; width: 243px; position: relative; background: none; }
-  .unit-sig--center .unit-sig__wordmark a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/unit-wordmark-black-large.svg"); }
+  .unit-sig--center .unit-sig__wordmark a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/unit-wordmark-large.svg"); }
   .unit-sig--center .unit-sig__unit a { width: 404px; height: 57px; margin-bottom: 0; position: relative; background: none; }
-  .unit-sig--center .unit-sig__unit a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/unit-name-black-large.svg"); } }
+  .unit-sig--center .unit-sig__unit a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/unit-name-large.svg"); } }
 
 .unit-sig--health { background: #F0F0F0; }
 
@@ -542,11 +542,11 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
 
 .unit-sig--health .unit-sig__wordmark, .unit-sig--health .unit-sig__unit { margin-left: 65px; }
 
-.unit-sig--health .unit-sig__wordmark a { height: 20px; width: 223px; background-image: url("../images/health-wordmark-black-medium.svg"); margin-left: 2px; }
+.unit-sig--health .unit-sig__wordmark a { height: 20px; width: 223px; background-image: url("../images/health-wordmark-medium.svg"); margin-left: 2px; }
 
 .unit-sig--health .unit-sig__wordmark a:hover, .unit-sig--health .unit-sig__wordmark a:focus, .unit-sig--health .unit-sig__wordmark a:active { background-position: left -20px; }
 
-.unit-sig--health .unit-sig__unit a { width: 284px; height: 40px; margin-bottom: 1px; background-image: url("../images/unit-name-black-medium.svg"); }
+.unit-sig--health .unit-sig__unit a { width: 284px; height: 40px; margin-bottom: 1px; background-image: url("../images/unit-name-medium.svg"); }
 
 .unit-sig--health .unit-sig__unit a:hover, .unit-sig--health .unit-sig__unit a:focus, .unit-sig--health .unit-sig__unit a:active { background-position: left -40px; }
 
@@ -556,9 +556,9 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
   .unit-sig--health .unit-sig__logo a, .unit-sig--health .unit-sig__wordmark a, .unit-sig--health .unit-sig__unit a { display: block; text-indent: 200%; white-space: nowrap; overflow: hidden; padding: 0; background-repeat: no-repeat; background-position: left 0; margin: 0; }
   .unit-sig--health .unit-sig__logo a { width: 34px; height: 38px; background-image: url("../images/mu-logo-small.svg"); float: left; margin-left: -1px; }
   .unit-sig--health .unit-sig__wordmark, .unit-sig--health .unit-sig__unit { margin-left: 44px; }
-  .unit-sig--health .unit-sig__wordmark a { height: 17px; width: 180px; background-image: url("../images/health-wordmark-black-small.svg"); margin-left: 1px; }
+  .unit-sig--health .unit-sig__wordmark a { height: 17px; width: 180px; background-image: url("../images/health-wordmark-small.svg"); margin-left: 1px; }
   .unit-sig--health .unit-sig__wordmark a:hover, .unit-sig--health .unit-sig__wordmark a:focus, .unit-sig--health .unit-sig__wordmark a:active { background-position: left -17px; }
-  .unit-sig--health .unit-sig__unit a { width: 194px; height: 27px; margin-bottom: 0; background-image: url("../images/unit-name-black-small.svg"); }
+  .unit-sig--health .unit-sig__unit a { width: 194px; height: 27px; margin-bottom: 0; background-image: url("../images/unit-name-small.svg"); }
   .unit-sig--health .unit-sig__unit a:hover, .unit-sig--health .unit-sig__unit a:focus, .unit-sig--health .unit-sig__unit a:active { background-position: left -27px; } }
 
 @media screen and (min-width: 951px) { .unit-sig--health:before, .unit-sig--health:after { content: ' '; display: table; }
@@ -567,9 +567,9 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
   .unit-sig--health .unit-sig__logo a, .unit-sig--health .unit-sig__wordmark a, .unit-sig--health .unit-sig__unit a { display: block; text-indent: 200%; white-space: nowrap; overflow: hidden; padding: 0; background-repeat: no-repeat; background-position: left 0; margin: 0; }
   .unit-sig--health .unit-sig__logo a { width: 66px; height: 74px; background-image: url("../images/mu-logo-large.svg"); float: left; margin-left: -1px; }
   .unit-sig--health .unit-sig__wordmark, .unit-sig--health .unit-sig__unit { margin-left: 86px; }
-  .unit-sig--health .unit-sig__wordmark a { height: 26px; width: 295px; background-image: url("../images/health-wordmark-black-large.svg"); margin-left: 2px; }
+  .unit-sig--health .unit-sig__wordmark a { height: 26px; width: 295px; background-image: url("../images/health-wordmark-large.svg"); margin-left: 2px; }
   .unit-sig--health .unit-sig__wordmark a:hover, .unit-sig--health .unit-sig__wordmark a:focus, .unit-sig--health .unit-sig__wordmark a:active { background-position: left -26px; }
-  .unit-sig--health .unit-sig__unit a { width: 404px; height: 57px; margin-bottom: 2px; background-image: url("../images/unit-name-black-large.svg"); }
+  .unit-sig--health .unit-sig__unit a { width: 404px; height: 57px; margin-bottom: 2px; background-image: url("../images/unit-name-large.svg"); }
   .unit-sig--health .unit-sig__unit a:hover, .unit-sig--health .unit-sig__unit a:focus, .unit-sig--health .unit-sig__unit a:active { background-position: left -57px; } }
 
 @media print { .unit-sig--health:before, .unit-sig--health:after { content: ' '; display: table; }
@@ -580,9 +580,9 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
   .unit-sig--health .unit-sig__logo a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/mu-logo-large.svg"); }
   .unit-sig--health .unit-sig__wordmark, .unit-sig--health .unit-sig__unit { margin-left: 86px; }
   .unit-sig--health .unit-sig__wordmark a { height: 26px; width: 295px; position: relative; background: none; margin-left: 2px; }
-  .unit-sig--health .unit-sig__wordmark a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/health-wordmark-black-large.svg"); }
+  .unit-sig--health .unit-sig__wordmark a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/health-wordmark-large.svg"); }
   .unit-sig--health .unit-sig__unit a { width: 404px; height: 57px; margin-bottom: 2px; position: relative; background: none; }
-  .unit-sig--health .unit-sig__unit a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/unit-name-black-large.svg"); } }
+  .unit-sig--health .unit-sig__unit a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/unit-name-large.svg"); } }
 
 .mu-sig--light { background: #F0F0F0; }
 
@@ -596,9 +596,9 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
 
 .mu-sig--light .mu-sig__logo a { width: 50px; height: 56px; background-image: url("../images/mu-logo-medium.svg"); float: left; margin-left: -1px; }
 
-.mu-sig--light .mu-sig__wordmark { color: red; margin-left: 65px; padding-top: 11px; }
+.mu-sig--light .mu-sig__wordmark { margin-left: 65px; padding-top: 11px; }
 
-.mu-sig--light .mu-sig__wordmark a { width: 334px; height: 39px; background-image: url("../images/mu-wordmark-black-medium.svg"); }
+.mu-sig--light .mu-sig__wordmark a { width: 334px; height: 39px; background-image: url("../images/mu-wordmark-medium.svg"); }
 
 .mu-sig--light .mu-sig__wordmark a:hover, .mu-sig--light .mu-sig__wordmark a:focus, .mu-sig--light .mu-sig__wordmark a:active { background-position: left -39px; }
 
@@ -607,8 +607,8 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
   .mu-sig--light .mu-sig__logo, .mu-sig--light .mu-sig__wordmark { margin: 0; }
   .mu-sig--light .mu-sig__logo a, .mu-sig--light .mu-sig__wordmark a { display: block; text-indent: 200%; white-space: nowrap; overflow: hidden; padding: 0; background-repeat: no-repeat; background-position: left 0; margin: 0; }
   .mu-sig--light .mu-sig__logo a { width: 34px; height: 38px; background-image: url("../images/mu-logo-small.svg"); float: left; margin-left: -1px; }
-  .mu-sig--light .mu-sig__wordmark { color: red; margin-left: 44px; padding-top: 9px; }
-  .mu-sig--light .mu-sig__wordmark a { width: 229px; height: 27px; background-image: url("../images/mu-wordmark-black-small.svg"); }
+  .mu-sig--light .mu-sig__wordmark { margin-left: 44px; padding-top: 9px; }
+  .mu-sig--light .mu-sig__wordmark a { width: 229px; height: 27px; background-image: url("../images/mu-wordmark-small.svg"); }
   .mu-sig--light .mu-sig__wordmark a:hover, .mu-sig--light .mu-sig__wordmark a:focus, .mu-sig--light .mu-sig__wordmark a:active { background-position: left -27px; } }
 
 @media screen and (min-width: 951px) { .mu-sig--light:before, .mu-sig--light:after { content: ' '; display: table; }
@@ -616,8 +616,8 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
   .mu-sig--light .mu-sig__logo, .mu-sig--light .mu-sig__wordmark { margin: 0; }
   .mu-sig--light .mu-sig__logo a, .mu-sig--light .mu-sig__wordmark a { display: block; text-indent: 200%; white-space: nowrap; overflow: hidden; padding: 0; background-repeat: no-repeat; background-position: left 0; margin: 0; }
   .mu-sig--light .mu-sig__logo a { width: 66px; height: 74px; background-image: url("../images/mu-logo-large.svg"); float: left; margin-left: -1px; }
-  .mu-sig--light .mu-sig__wordmark { color: red; margin-left: 86px; padding-top: 14px; }
-  .mu-sig--light .mu-sig__wordmark a { width: 478px; height: 56px; background-image: url("../images/mu-wordmark-black-large.svg"); }
+  .mu-sig--light .mu-sig__wordmark { margin-left: 86px; padding-top: 14px; }
+  .mu-sig--light .mu-sig__wordmark a { width: 478px; height: 56px; background-image: url("../images/mu-wordmark-large.svg"); }
   .mu-sig--light .mu-sig__wordmark a:hover, .mu-sig--light .mu-sig__wordmark a:focus, .mu-sig--light .mu-sig__wordmark a:active { background-position: left -56px; } }
 
 @media print { .mu-sig--light:before, .mu-sig--light:after { content: ' '; display: table; }
@@ -626,9 +626,9 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
   .mu-sig--light .mu-sig__logo a, .mu-sig--light .mu-sig__wordmark a { display: block; text-indent: 200%; white-space: nowrap; overflow: hidden; padding: 0; background-repeat: no-repeat; background-position: left 0; margin: 0; }
   .mu-sig--light .mu-sig__logo a { width: 66px; height: 74px; position: relative; background: none; float: left; margin-left: -1px; }
   .mu-sig--light .mu-sig__logo a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/mu-logo-large.svg"); }
-  .mu-sig--light .mu-sig__wordmark { color: red; margin-left: 86px; padding-top: 14px; }
+  .mu-sig--light .mu-sig__wordmark { margin-left: 86px; padding-top: 14px; }
   .mu-sig--light .mu-sig__wordmark a { width: 478px; height: 56px; position: relative; background: none; }
-  .mu-sig--light .mu-sig__wordmark a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/mu-wordmark-black-large.svg"); } }
+  .mu-sig--light .mu-sig__wordmark a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/mu-wordmark-large.svg"); } }
 
 .mu-sig--dark { background: #222222; }
 
@@ -642,29 +642,29 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
 
 .mu-sig--dark .mu-sig__logo a { width: 50px; height: 56px; background-image: url("../images/mu-logo-medium.svg"); float: left; margin-left: -1px; }
 
-.mu-sig--dark .mu-sig__wordmark { color: red; margin-left: 65px; padding-top: 11px; }
+.mu-sig--dark .mu-sig__wordmark { margin-left: 65px; padding-top: 11px; }
 
-.mu-sig--dark .mu-sig__wordmark a { width: 334px; height: 39px; background-image: url("../images/mu-wordmark-white-medium.svg"); }
+.mu-sig--dark .mu-sig__wordmark a { width: 334px; height: 39px; background-image: url("../images/mu-wordmark-medium.svg"); background-position: left -78px; }
 
-.mu-sig--dark .mu-sig__wordmark a:hover, .mu-sig--dark .mu-sig__wordmark a:focus, .mu-sig--dark .mu-sig__wordmark a:active { background-position: left -39px; }
+.mu-sig--dark .mu-sig__wordmark a:hover, .mu-sig--dark .mu-sig__wordmark a:focus, .mu-sig--dark .mu-sig__wordmark a:active { background-position: left -117px; }
 
 @media screen and (max-width: 700px) { .mu-sig--dark:before, .mu-sig--dark:after { content: ' '; display: table; }
   .mu-sig--dark:after { clear: both; }
   .mu-sig--dark .mu-sig__logo, .mu-sig--dark .mu-sig__wordmark { margin: 0; }
   .mu-sig--dark .mu-sig__logo a, .mu-sig--dark .mu-sig__wordmark a { display: block; text-indent: 200%; white-space: nowrap; overflow: hidden; padding: 0; background-repeat: no-repeat; background-position: left 0; margin: 0; }
   .mu-sig--dark .mu-sig__logo a { width: 34px; height: 38px; background-image: url("../images/mu-logo-small.svg"); float: left; margin-left: -1px; }
-  .mu-sig--dark .mu-sig__wordmark { color: red; margin-left: 44px; padding-top: 9px; }
-  .mu-sig--dark .mu-sig__wordmark a { width: 229px; height: 27px; background-image: url("../images/mu-wordmark-white-small.svg"); }
-  .mu-sig--dark .mu-sig__wordmark a:hover, .mu-sig--dark .mu-sig__wordmark a:focus, .mu-sig--dark .mu-sig__wordmark a:active { background-position: left -27px; } }
+  .mu-sig--dark .mu-sig__wordmark { margin-left: 44px; padding-top: 9px; }
+  .mu-sig--dark .mu-sig__wordmark a { width: 229px; height: 27px; background-image: url("../images/mu-wordmark-small.svg"); background-position: left -54px; }
+  .mu-sig--dark .mu-sig__wordmark a:hover, .mu-sig--dark .mu-sig__wordmark a:focus, .mu-sig--dark .mu-sig__wordmark a:active { background-position: left -81px; } }
 
 @media screen and (min-width: 951px) { .mu-sig--dark:before, .mu-sig--dark:after { content: ' '; display: table; }
   .mu-sig--dark:after { clear: both; }
   .mu-sig--dark .mu-sig__logo, .mu-sig--dark .mu-sig__wordmark { margin: 0; }
   .mu-sig--dark .mu-sig__logo a, .mu-sig--dark .mu-sig__wordmark a { display: block; text-indent: 200%; white-space: nowrap; overflow: hidden; padding: 0; background-repeat: no-repeat; background-position: left 0; margin: 0; }
   .mu-sig--dark .mu-sig__logo a { width: 66px; height: 74px; background-image: url("../images/mu-logo-large.svg"); float: left; margin-left: -1px; }
-  .mu-sig--dark .mu-sig__wordmark { color: red; margin-left: 86px; padding-top: 14px; }
-  .mu-sig--dark .mu-sig__wordmark a { width: 478px; height: 56px; background-image: url("../images/mu-wordmark-white-large.svg"); }
-  .mu-sig--dark .mu-sig__wordmark a:hover, .mu-sig--dark .mu-sig__wordmark a:focus, .mu-sig--dark .mu-sig__wordmark a:active { background-position: left -56px; } }
+  .mu-sig--dark .mu-sig__wordmark { margin-left: 86px; padding-top: 14px; }
+  .mu-sig--dark .mu-sig__wordmark a { width: 478px; height: 56px; background-image: url("../images/mu-wordmark-large.svg"); background-position: left -112px; }
+  .mu-sig--dark .mu-sig__wordmark a:hover, .mu-sig--dark .mu-sig__wordmark a:focus, .mu-sig--dark .mu-sig__wordmark a:active { background-position: left -168px; } }
 
 @media print { .mu-sig--dark:before, .mu-sig--dark:after { content: ' '; display: table; }
   .mu-sig--dark:after { clear: both; }
@@ -672,9 +672,9 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
   .mu-sig--dark .mu-sig__logo a, .mu-sig--dark .mu-sig__wordmark a { display: block; text-indent: 200%; white-space: nowrap; overflow: hidden; padding: 0; background-repeat: no-repeat; background-position: left 0; margin: 0; }
   .mu-sig--dark .mu-sig__logo a { width: 66px; height: 74px; position: relative; background: none; float: left; margin-left: -1px; }
   .mu-sig--dark .mu-sig__logo a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/mu-logo-large.svg"); }
-  .mu-sig--dark .mu-sig__wordmark { color: red; margin-left: 86px; padding-top: 14px; }
+  .mu-sig--dark .mu-sig__wordmark { margin-left: 86px; padding-top: 14px; }
   .mu-sig--dark .mu-sig__wordmark a { width: 478px; height: 56px; position: relative; background: none; }
-  .mu-sig--dark .mu-sig__wordmark a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/mu-wordmark-black-large.svg"); } }
+  .mu-sig--dark .mu-sig__wordmark a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/mu-wordmark-large.svg"); } }
 
 .mu-sig--center { background: #F1B82D; }
 
@@ -684,24 +684,20 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
 
 .mu-sig--center .mu-sig__logo a { width: 50px; height: 56px; background-image: url("../images/mu-logo-medium.svg"); margin-bottom: 15px; }
 
-.mu-sig--center .mu-sig__wordmark { color: red; }
-
-.mu-sig--center .mu-sig__wordmark a { width: 334px; height: 39px; background-image: url("../images/mu-wordmark-black-medium.svg"); }
+.mu-sig--center .mu-sig__wordmark a { width: 334px; height: 39px; background-image: url("../images/mu-wordmark-medium.svg"); }
 
 .mu-sig--center .mu-sig__wordmark a:hover, .mu-sig--center .mu-sig__wordmark a:focus, .mu-sig--center .mu-sig__wordmark a:active { background-position: left -39px; }
 
 @media screen and (max-width: 700px) { .mu-sig--center .mu-sig__logo, .mu-sig--center .mu-sig__wordmark { margin: 0; }
   .mu-sig--center .mu-sig__logo a, .mu-sig--center .mu-sig__wordmark a { display: block; text-indent: 200%; white-space: nowrap; overflow: hidden; padding: 0; background-repeat: no-repeat; background-position: left 0; margin-left: auto; margin-right: auto; }
   .mu-sig--center .mu-sig__logo a { width: 34px; height: 38px; background-image: url("../images/mu-logo-small.svg"); margin-bottom: 10px; }
-  .mu-sig--center .mu-sig__wordmark { color: red; }
-  .mu-sig--center .mu-sig__wordmark a { width: 229px; height: 27px; background-image: url("../images/mu-wordmark-black-small.svg"); }
+  .mu-sig--center .mu-sig__wordmark a { width: 229px; height: 27px; background-image: url("../images/mu-wordmark-small.svg"); }
   .mu-sig--center .mu-sig__wordmark a:hover, .mu-sig--center .mu-sig__wordmark a:focus, .mu-sig--center .mu-sig__wordmark a:active { background-position: left -27px; } }
 
 @media screen and (min-width: 951px) { .mu-sig--center .mu-sig__logo, .mu-sig--center .mu-sig__wordmark { margin: 0; }
   .mu-sig--center .mu-sig__logo a, .mu-sig--center .mu-sig__wordmark a { display: block; text-indent: 200%; white-space: nowrap; overflow: hidden; padding: 0; background-repeat: no-repeat; background-position: left 0; margin-left: auto; margin-right: auto; }
   .mu-sig--center .mu-sig__logo a { width: 66px; height: 74px; background-image: url("../images/mu-logo-large.svg"); margin-bottom: 20px; }
-  .mu-sig--center .mu-sig__wordmark { color: red; }
-  .mu-sig--center .mu-sig__wordmark a { width: 478px; height: 56px; background-image: url("../images/mu-wordmark-black-large.svg"); }
+  .mu-sig--center .mu-sig__wordmark a { width: 478px; height: 56px; background-image: url("../images/mu-wordmark-large.svg"); }
   .mu-sig--center .mu-sig__wordmark a:hover, .mu-sig--center .mu-sig__wordmark a:focus, .mu-sig--center .mu-sig__wordmark a:active { background-position: left -56px; } }
 
 @media print { .mu-sig--center:before, .mu-sig--center:after { content: ' '; display: table; }
@@ -710,9 +706,9 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
   .mu-sig--center .mu-sig__logo a, .mu-sig--center .mu-sig__wordmark a { display: block; text-indent: 200%; white-space: nowrap; overflow: hidden; padding: 0; background-repeat: no-repeat; background-position: left 0; margin: 0; }
   .mu-sig--center .mu-sig__logo a { width: 66px; height: 74px; position: relative; background: none; float: left; margin-left: -1px; }
   .mu-sig--center .mu-sig__logo a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/mu-logo-large.svg"); }
-  .mu-sig--center .mu-sig__wordmark { color: red; margin-left: 86px; padding-top: 14px; }
+  .mu-sig--center .mu-sig__wordmark { margin-left: 86px; padding-top: 14px; }
   .mu-sig--center .mu-sig__wordmark a { width: 478px; height: 56px; position: relative; background: none; }
-  .mu-sig--center .mu-sig__wordmark a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/mu-wordmark-black-large.svg"); } }
+  .mu-sig--center .mu-sig__wordmark a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/mu-wordmark-large.svg"); } }
 
 /* @end */
 /* @group Colors */
@@ -750,17 +746,17 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
 
 .color-swatch--gold-600 .color-swatch__description:before { background: #AF7C00; border-color: #7c5800; border-bottom-width: 1px; }
 
-.color-swatch--grey-100 .color-swatch__description:before { background: #F0F0F0; border-color: #d7d7d7; }
+.color-swatch--gray-100 .color-swatch__description:before { background: #F0F0F0; border-color: #d7d7d7; }
 
-.color-swatch--grey-200 .color-swatch__description:before { background: #CCCCCC; border-color: #b3b3b3; }
+.color-swatch--gray-200 .color-swatch__description:before { background: #CCCCCC; border-color: #b3b3b3; }
 
-.color-swatch--grey-300 .color-swatch__description:before { background: #999999; border-color: gray; }
+.color-swatch--gray-300 .color-swatch__description:before { background: #999999; border-color: gray; }
 
-.color-swatch--grey-400 .color-swatch__description:before { background: #666666; border-color: #4d4d4d; }
+.color-swatch--gray-400 .color-swatch__description:before { background: #666666; border-color: #4d4d4d; }
 
-.color-swatch--grey-500 .color-swatch__description:before { background: #444444; border-color: #2b2b2b; }
+.color-swatch--gray-500 .color-swatch__description:before { background: #444444; border-color: #2b2b2b; }
 
-.color-swatch--grey-600 .color-swatch__description:before { background: #222222; border-color: #090909; border-bottom-width: 1px; }
+.color-swatch--gray-600 .color-swatch__description:before { background: #222222; border-color: #090909; border-bottom-width: 1px; }
 
 .color-swatch--tan-100 .color-swatch__description:before { background: #F6F5EA; border-color: #e7e4c6; }
 
@@ -774,17 +770,17 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
 
 .color-swatch--tan-600 .color-swatch__description:before { background: #474740; border-color: #2c2c28; border-bottom-width: 1px; }
 
-.color-swatch--warm-grey-100 .color-swatch__description:before { background: #EDEAE6; border-color: #d8d1c8; }
+.color-swatch--warm-gray-100 .color-swatch__description:before { background: #EDEAE6; border-color: #d8d1c8; }
 
-.color-swatch--warm-grey-200 .color-swatch__description:before { background: #DBD5CD; border-color: #c6bcaf; }
+.color-swatch--warm-gray-200 .color-swatch__description:before { background: #DBD5CD; border-color: #c6bcaf; }
 
-.color-swatch--warm-grey-300 .color-swatch__description:before { background: #8F8884; border-color: #756f6b; }
+.color-swatch--warm-gray-300 .color-swatch__description:before { background: #8F8884; border-color: #756f6b; }
 
-.color-swatch--warm-grey-400 .color-swatch__description:before { background: #595552; border-color: #3e3c3a; }
+.color-swatch--warm-gray-400 .color-swatch__description:before { background: #595552; border-color: #3e3c3a; }
 
-.color-swatch--warm-grey-500 .color-swatch__description:before { background: #33312F; border-color: #181817; }
+.color-swatch--warm-gray-500 .color-swatch__description:before { background: #33312F; border-color: #181817; }
 
-.color-swatch--warm-grey-600 .color-swatch__description:before { background: #242221; border-color: #090909; border-bottom-width: 1px; }
+.color-swatch--warm-gray-600 .color-swatch__description:before { background: #242221; border-color: #090909; border-bottom-width: 1px; }
 
 .color-swatch--red-100 .color-swatch__description:before { background: #FFECEC; border-color: #ffb9b9; }
 
@@ -854,17 +850,17 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
 
 .accessible-color--white { color: #fff; }
 
-.accessible-color--grey-100 { color: #F0F0F0; }
+.accessible-color--gray-100 { color: #F0F0F0; }
 
-.accessible-color--grey-200 { color: #CCCCCC; }
+.accessible-color--gray-200 { color: #CCCCCC; }
 
-.accessible-color--grey-300 { color: #999999; }
+.accessible-color--gray-300 { color: #999999; }
 
-.accessible-color--grey-400 { color: #666666; }
+.accessible-color--gray-400 { color: #666666; }
 
-.accessible-color--grey-500 { color: #444444; }
+.accessible-color--gray-500 { color: #444444; }
 
-.accessible-color--grey-600 { color: #222222; }
+.accessible-color--gray-600 { color: #222222; }
 
 .accessible-color--black { color: #000; }
 
@@ -880,17 +876,17 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
 
 .accessible-color--tan-600 { color: #474740; }
 
-.accessible-color--warm-grey-100 { color: #EDEAE6; }
+.accessible-color--warm-gray-100 { color: #EDEAE6; }
 
-.accessible-color--warm-grey-200 { color: #DBD5CD; }
+.accessible-color--warm-gray-200 { color: #DBD5CD; }
 
-.accessible-color--warm-grey-300 { color: #8F8884; }
+.accessible-color--warm-gray-300 { color: #8F8884; }
 
-.accessible-color--warm-grey-400 { color: #595552; }
+.accessible-color--warm-gray-400 { color: #595552; }
 
-.accessible-color--warm-grey-500 { color: #33312F; }
+.accessible-color--warm-gray-500 { color: #33312F; }
 
-.accessible-color--warm-grey-600 { color: #242221; }
+.accessible-color--warm-gray-600 { color: #242221; }
 
 .accessible-color--red-100 { color: #FFECEC; }
 
@@ -954,17 +950,17 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
 
 .accessible-color-background--white { background: #fff; border-color: #e6e6e6; }
 
-.accessible-color-background--grey-100 { background: #F0F0F0; border-color: #d7d7d7; }
+.accessible-color-background--gray-100 { background: #F0F0F0; border-color: #d7d7d7; }
 
-.accessible-color-background--grey-200 { background: #CCCCCC; border-color: #b3b3b3; }
+.accessible-color-background--gray-200 { background: #CCCCCC; border-color: #b3b3b3; }
 
-.accessible-color-background--grey-300 { background: #999999; border-color: gray; }
+.accessible-color-background--gray-300 { background: #999999; border-color: gray; }
 
-.accessible-color-background--grey-400 { background: #666666; border-color: #4d4d4d; }
+.accessible-color-background--gray-400 { background: #666666; border-color: #4d4d4d; }
 
-.accessible-color-background--grey-500 { background: #444444; border-color: #2b2b2b; }
+.accessible-color-background--gray-500 { background: #444444; border-color: #2b2b2b; }
 
-.accessible-color-background--grey-600 { background: #222222; border-color: #090909; }
+.accessible-color-background--gray-600 { background: #222222; border-color: #090909; }
 
 .accessible-color-background--black { background: #000; border-color: #000; }
 
@@ -980,17 +976,17 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
 
 .accessible-color-background--tan-600 { background: #474740; border-color: #2c2c28; }
 
-.accessible-color-background--warm-grey-100 { background: #EDEAE6; border-color: #d8d1c8; }
+.accessible-color-background--warm-gray-100 { background: #EDEAE6; border-color: #d8d1c8; }
 
-.accessible-color-background--warm-grey-200 { background: #DBD5CD; border-color: #c6bcaf; }
+.accessible-color-background--warm-gray-200 { background: #DBD5CD; border-color: #c6bcaf; }
 
-.accessible-color-background--warm-grey-300 { background: #8F8884; border-color: #756f6b; }
+.accessible-color-background--warm-gray-300 { background: #8F8884; border-color: #756f6b; }
 
-.accessible-color-background--warm-grey-400 { background: #595552; border-color: #3e3c3a; }
+.accessible-color-background--warm-gray-400 { background: #595552; border-color: #3e3c3a; }
 
-.accessible-color-background--warm-grey-500 { background: #33312F; border-color: #181817; }
+.accessible-color-background--warm-gray-500 { background: #33312F; border-color: #181817; }
 
-.accessible-color-background--warm-grey-600 { background: #242221; border-color: #090909; }
+.accessible-color-background--warm-gray-600 { background: #242221; border-color: #090909; }
 
 .accessible-color-background--red-100 { background: #FFECEC; border-color: #ffb9b9; }
 
@@ -1267,20 +1263,20 @@ body { background-color: #222; }
 
 .mu-sig-styleguide .mu-sig__logo a { width: 34px; height: 38px; background-image: url("../images/mu-logo-small.svg"); float: left; margin-left: -1px; }
 
-.mu-sig-styleguide .mu-sig__wordmark { color: red; margin-left: 44px; padding-top: 9px; }
+.mu-sig-styleguide .mu-sig__wordmark { margin-left: 44px; padding-top: 9px; }
 
-.mu-sig-styleguide .mu-sig__wordmark a { width: 229px; height: 27px; background-image: url("../images/mu-wordmark-white-small.svg"); }
+.mu-sig-styleguide .mu-sig__wordmark a { width: 229px; height: 27px; background-image: url("../images/mu-wordmark-small.svg"); background-position: left -54px; }
 
-.mu-sig-styleguide .mu-sig__wordmark a:hover, .mu-sig-styleguide .mu-sig__wordmark a:focus, .mu-sig-styleguide .mu-sig__wordmark a:active { background-position: left -27px; }
+.mu-sig-styleguide .mu-sig__wordmark a:hover, .mu-sig-styleguide .mu-sig__wordmark a:focus, .mu-sig-styleguide .mu-sig__wordmark a:active { background-position: left -81px; }
 
 @media screen and (max-width: 700px) { .mu-sig-styleguide:before, .mu-sig-styleguide:after { content: ' '; display: table; }
   .mu-sig-styleguide:after { clear: both; }
   .mu-sig-styleguide .mu-sig__logo, .mu-sig-styleguide .mu-sig__wordmark { margin: 0; }
   .mu-sig-styleguide .mu-sig__logo a, .mu-sig-styleguide .mu-sig__wordmark a { display: block; text-indent: 200%; white-space: nowrap; overflow: hidden; padding: 0; background-repeat: no-repeat; background-position: left 0; margin: 0; }
   .mu-sig-styleguide .mu-sig__logo a { width: 26px; height: 29px; background-image: url("../images/mu-logo-extra-small.svg"); float: left; margin-left: -1px; }
-  .mu-sig-styleguide .mu-sig__wordmark { color: red; margin-left: 33px; padding-top: 6px; }
-  .mu-sig-styleguide .mu-sig__wordmark a { width: 177px; height: 21px; background-image: url("../images/mu-wordmark-white-extra-small.svg"); }
-  .mu-sig-styleguide .mu-sig__wordmark a:hover, .mu-sig-styleguide .mu-sig__wordmark a:focus, .mu-sig-styleguide .mu-sig__wordmark a:active { background-position: left -21px; } }
+  .mu-sig-styleguide .mu-sig__wordmark { margin-left: 33px; padding-top: 6px; }
+  .mu-sig-styleguide .mu-sig__wordmark a { width: 177px; height: 21px; background-image: url("../images/mu-wordmark-extra-small.svg"); background-position: left -42px; }
+  .mu-sig-styleguide .mu-sig__wordmark a:hover, .mu-sig-styleguide .mu-sig__wordmark a:focus, .mu-sig-styleguide .mu-sig__wordmark a:active { background-position: left -63px; } }
 
 @media print { .mu-sig-styleguide:before, .mu-sig-styleguide:after { content: ' '; display: table; }
   .mu-sig-styleguide:after { clear: both; }
@@ -1288,9 +1284,9 @@ body { background-color: #222; }
   .mu-sig-styleguide .mu-sig__logo a, .mu-sig-styleguide .mu-sig__wordmark a { display: block; text-indent: 200%; white-space: nowrap; overflow: hidden; padding: 0; background-repeat: no-repeat; background-position: left 0; margin: 0; }
   .mu-sig-styleguide .mu-sig__logo a { width: 34px; height: 38px; position: relative; background: none; float: left; margin-left: -1px; }
   .mu-sig-styleguide .mu-sig__logo a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/mu-logo-small.svg"); }
-  .mu-sig-styleguide .mu-sig__wordmark { color: red; margin-left: 44px; padding-top: 9px; }
+  .mu-sig-styleguide .mu-sig__wordmark { margin-left: 44px; padding-top: 9px; }
   .mu-sig-styleguide .mu-sig__wordmark a { width: 229px; height: 27px; position: relative; background: none; }
-  .mu-sig-styleguide .mu-sig__wordmark a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/mu-wordmark-black-small.svg"); } }
+  .mu-sig-styleguide .mu-sig__wordmark a:after { text-indent: 0; display: block; position: absolute; top: 0; left: 0; content: url("../images/mu-wordmark-small.svg"); } }
 
 header { background-color: #F1B82D; padding: 1.5em 0; }
 
